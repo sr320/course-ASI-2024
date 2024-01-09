@@ -1,11 +1,11 @@
 ---
-title: "Day 01 : Plan"
+title: "Daily Outline
 ---
 
 
-## Plan for today (subject to change)
+## Day 01
 
-- [Course Description](index.qmd)
+- [Course Description](/index.qmd)
 
 - Instructor Background
 
@@ -25,3 +25,11 @@ Lunch
 
 - Demonstration: Bash 
 
+- Case Study: Gene Expression 
+  - [Characterization of the Gene Repertoire and Environmentally Driven Expression Patterns in Tanner Crab (Chionoecetes bairdi)](https://gannet.fish.washington.edu/seashell/snaps/s10126-022-10100-8.pdf)
+  
+  
+## Day 02
+  
+  
+  

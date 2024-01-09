@@ -19,24 +19,16 @@ website:
   sidebar:
     style: "docked"
     contents:
-      #- section: "Introduction"
-        #contents:
-          #- text: "Getting Started"
-            #file: modules/00-welcome.qmd
       - section: "Computational Background"
         contents:
           - modules/00-markdown.qmd
           - modules/01-github.qmd
           - modules/02-bash.qmd
           - modules/03-rstudio.qmd
-      - section: "Day 01"
+      - section: "Core Content"
         contents:
           - modules/day01.qmd
           - modules/10-climate.qmd
-
-
-
-
 
     
 format:
