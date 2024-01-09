@@ -4,8 +4,8 @@ project:
 
 website:
   title: "Epigenetic Phenomena Connecting Climate Change and Coastal Marine Species"
-  #repo-url: https://github.com/Robertslab/tusk
-  #repo-actions: [edit, issue]
+  repo-url: https://github.com/sr320/course-ASI-2024
+  repo-actions: [edit, issue]
   navbar:
     left:
       - href: index.qmd
@@ -18,14 +18,18 @@ website:
 
   sidebar:
     style: "docked"
- #  search: true
     contents:
-      - modules/00-markdown.qmd
-      - modules/01-github.qmd
-      - modules/02-bash.qmd
-      - modules/03-rstudio.qmd
-      - modules/04-blast.qmd
-  
+      - section: "Introduction"
+        contents:
+          - text: "Getting Started"
+            file: modules/00-welcome.qmd
+      - section: "Computational Overview""
+        contents:
+          - modules/01-github.qmd
+          - modules/02-bash.qmd
+          - modules/03-rstudio.qmd
+
+
 
 
     

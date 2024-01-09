@@ -1,0 +1,14 @@
+---
+title: "Welcome"
+---
+
+## Getting Started
+
+There are few things to do beforehand if you have the time.
+
+1. Complete this pre-course survey
+
+2. [Get a GitHub Account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) if you do not already have one.
+
+
+
