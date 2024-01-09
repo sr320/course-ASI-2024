@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Roberts Lab Course Set - Things u should know"
+  repo-url: https://github.com/Robertslab/tusk
+  repo-actions: [edit, issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+    tools:
+      - icon: github
+        href: https://github.com/RobertsLab/tusk
+      
+
+  sidebar:
+    style: "docked"
+ #  search: true
+    contents:
+      - modules/00-markdown.qmd
+      - modules/01-github.qmd
+      - modules/02-bash.qmd
+      - modules/03-rstudio.qmd
+      - modules/04-blast.qmd
+  
+
+
+    
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+
+editor: visual
+
