@@ -1,0 +1,21 @@
+---
+title: "Climate Change"
+---
+
+Climate change, a pressing global issue, is significantly impacting coastal marine species, with notable effects on marine invertebrates.
+
+![](../img/01-climate.png)
+
+1.  **Rising Sea Temperatures:** The increase in global temperatures, a hallmark of climate change, has a direct effect on marine ecosystems. Marine invertebrates, such as corals, mollusks, and crustaceans, are particularly sensitive to temperature changes. For instance, coral bleaching, where corals lose their symbiotic algae due to stress from elevated temperatures, undermines the foundation of coral reef ecosystems. These reefs are vital as they provide habitat, food, and breeding grounds for a diverse range of marine life.
+
+2.  **Ocean Acidification:** The absorption of increased levels of atmospheric CO2 by the oceans leads to ocean acidification. This chemical change in seawater can have deleterious effects on calcifying invertebrates like mollusks and corals. The reduced pH levels interfere with the ability of these organisms to produce and maintain their calcium carbonate structures, essential for their survival and for the ecosystem as a whole.
+
+3.  **Habitat Loss and Alteration**: Climate change contributes to sea-level rise and changes in ocean currents, leading to habitat loss and alteration. Coastal habitats like mangroves, which are crucial for many marine invertebrates, are being lost at an alarming rate. This loss not only affects the species residing there but also alters the larger ecological dynamics, including predator-prey relationships and breeding patterns.
+
+4.  **Changes in Species Distributions and Behavior**: As ocean temperatures shift, marine invertebrates may migrate to cooler waters, leading to changes in geographical distribution. This shift can disrupt existing ecological balances, as new species interactions emerge and established ones are lost. For example, the migration of certain species might lead to the introduction of new predators or competitors, impacting local biodiversity.
+
+5.  **Increased Incidence of Diseases**: Warmer waters can lead to an increase in the prevalence and severity of diseases affecting marine invertebrates. Pathogens and parasites thrive in these conditions, posing a significant threat to species that have not evolved to cope with these new challenges.
+
+6.  **Impact on Reproduction and Life Cycles**: Climate change can influence the reproductive cycles of marine invertebrates. Temperature changes can affect spawning times, larval development, and survival rates. For species with complex life cycles, like many marine invertebrates, even slight changes in environmental conditions can have cascading effects on their populations.
+
+In conclusion, climate change is altering the very fabric of coastal marine ecosystems, with profound implications for marine invertebrates. Understanding and mitigating these impacts is crucial for preserving biodiversity and the health of our oceans. For those delving into marine biology or environmental sciences, appreciating the complexities of these changes is vital for developing effective aquaculture production and conservation strategies

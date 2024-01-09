@@ -1,0 +1,27 @@
+---
+title: "Day 01 : Plan"
+---
+
+
+## Plan for today (subject to change)
+
+- [Course Description](index.qmd)
+
+- Instructor Background
+
+- Class Background and Interests
+
+- Homeostasis
+
+- Cell and Molecular Biology
+
+
+Lunch
+
+
+- Discussion of Reproducible & Open Science
+
+- Overview of Framework of for Computational Component
+
+- Demonstration: Bash 
+
