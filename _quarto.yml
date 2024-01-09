@@ -3,17 +3,17 @@ project:
   output-dir: docs
 
 website:
-  title: "Roberts Lab Course Set - Things u should know"
-  repo-url: https://github.com/Robertslab/tusk
-  repo-actions: [edit, issue]
+  title: "Epigenetic Phenomena Connecting Climate Change and Coastal Marine Species"
+  #repo-url: https://github.com/Robertslab/tusk
+  #repo-actions: [edit, issue]
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+     
     tools:
       - icon: github
-        href: https://github.com/RobertsLab/tusk
+        href: https://github.com/sr320/course-ASI-2024
       
 
   sidebar:
