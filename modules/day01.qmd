@@ -1,35 +1,34 @@
 ---
-title: "Daily Outline
+title: "Daily Outline"
 ---
+
 
 
 ## Day 01
 
-- [Course Description](/index.qmd)
+-   [Course Description](/index.qmd)
 
-- Instructor Background
+-   Instructor Background
 
-- Class Background and Interests
+-   Class Background and Interests
 
-- Homeostasis
+-   Homeostasis
 
-- Cell and Molecular Biology
-
+-   Cell and Molecular Biology
 
 Lunch
 
+-   Discussion of Reproducible & Open Science
 
-- Discussion of Reproducible & Open Science
+-   Overview of Framework of for Computational Component
 
-- Overview of Framework of for Computational Component
+-   Demonstration: Bash
 
-- Demonstration: Bash 
+-   Case Study: Gene Expression
+[Characterization of the Gene Repertoire and Environmentally Driven Expression Patterns in Tanner Crab (Chionoecetes bairdi)](https://gannet.fish.washington.edu/seashell/snaps/s10126-022-10100-8.pdf)
 
-- Case Study: Gene Expression 
-  - [Characterization of the Gene Repertoire and Environmentally Driven Expression Patterns in Tanner Crab (Chionoecetes bairdi)](https://gannet.fish.washington.edu/seashell/snaps/s10126-022-10100-8.pdf)
-  
-  
+
 ## Day 02
-  
-  
-  
+
+
+

@@ -30,16 +30,23 @@
   {
     "objectID": "modules/day01.html",
     "href": "modules/day01.html",
-    "title": "Day 01 : Plan",
+    "title": "Daily Outline",
     "section": "",
-    "text": "Course Description\nInstructor Background\nClass Background and Interests\nHomeostasis\nCell and Molecular Biology\n\nLunch\n\nDiscussion of Reproducible & Open Science\nOverview of Framework of for Computational Component\nDemonstration: Bash"
+    "text": "Course Description\nInstructor Background\nClass Background and Interests\nHomeostasis\nCell and Molecular Biology\n\nLunch\n\nDiscussion of Reproducible & Open Science\nOverview of Framework of for Computational Component\nDemonstration: Bash\nCase Study: Gene Expression"
   },
   {
-    "objectID": "modules/day01.html#plan-for-today-subject-to-change",
-    "href": "modules/day01.html#plan-for-today-subject-to-change",
-    "title": "Day 01 : Plan",
+    "objectID": "modules/day01.html#day-01",
+    "href": "modules/day01.html#day-01",
+    "title": "Daily Outline",
     "section": "",
-    "text": "Course Description\nInstructor Background\nClass Background and Interests\nHomeostasis\nCell and Molecular Biology\n\nLunch\n\nDiscussion of Reproducible & Open Science\nOverview of Framework of for Computational Component\nDemonstration: Bash"
+    "text": "Course Description\nInstructor Background\nClass Background and Interests\nHomeostasis\nCell and Molecular Biology\n\nLunch\n\nDiscussion of Reproducible & Open Science\nOverview of Framework of for Computational Component\nDemonstration: Bash\nCase Study: Gene Expression"
+  },
+  {
+    "objectID": "modules/day01.html#day-02",
+    "href": "modules/day01.html#day-02",
+    "title": "Daily Outline",
+    "section": "Day 02",
+    "text": "Day 02"
   },
   {
     "objectID": "modules/00-markdown.html",
