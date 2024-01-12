@@ -35,6 +35,8 @@ website:
       - section: "Computer Labs"
         contents:
           - assignments/00-bash.qmd 
+          - assignments/01-blast.qmd
+          - assignments/02-DGE.qmd
     
 format:
   html:
