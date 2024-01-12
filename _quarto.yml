@@ -19,17 +19,22 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - section: "Computational Background"
+      - section: "Logistics"
+        contents:
+          - modules/day01.qmd  
+      - section: "Computation Basics"
         contents:
           - modules/00-markdown.qmd
           - modules/01-github.qmd
           - modules/02-bash.qmd
           - modules/03-rstudio.qmd
-      - section: "Core Content"
+      - section: "Biology and Ecology"
         contents:
           - modules/day01.qmd
           - modules/10-climate.qmd
-
+      - section: "Computer Labs"
+        contents:
+          - assignments/00-bash.qmd 
     
 format:
   html:

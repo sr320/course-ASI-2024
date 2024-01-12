@@ -1,10 +1,15 @@
 ---
-title: "Daily Outline"
+title: "Agenda"
 ---
 
 
 
-## Day 01
+
+
+
+# Biology
+
+Objective: Have general understanding of sub-organismal biology, computational framework of class. Gene expression.
 
 -   [Course Description](/index.qmd)
 
@@ -16,7 +21,6 @@ title: "Daily Outline"
 
 -   Cell and Molecular Biology
 
-Lunch
 
 -   Discussion of Reproducible & Open Science
 
@@ -28,7 +32,21 @@ Lunch
 [Characterization of the Gene Repertoire and Environmentally Driven Expression Patterns in Tanner Crab (Chionoecetes bairdi)](https://gannet.fish.washington.edu/seashell/snaps/s10126-022-10100-8.pdf)
 
 
-## Day 02
+
+
+## Epigenetics 
+
+
+
+## Epigenetic Applications
+
+
+
+## Evaluation Science
+
+
+
+## Presentations
 
 
 
