@@ -7,8 +7,17 @@ title: "Agenda"
 All slides are available at
 <https://github.com/sr320/course-ASI-2024/tree/main/slides>
 
+# Notepads
+
+[google docs notepad](https://docs.google.com/document/d/1hEh-KW_sLq0EjMR5IuQjB8H629X2exJZbFefLs6upqE/edit?usp=sharing)
+
+
+
+
 # Grading
 This course will be graded. Each day there will be a quiz worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms. 
+
+
 
 ## Presentation 
 For the presentation students will select two papers on a

@@ -1,0 +1,9 @@
+---
+title: "notes"
+---
+
+
+
+```{=html}
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vSQS1shgjxgzi_2dnnSqABB6boRXnUSZLNUlVwuedBWZ3bUtI15T2cmfjN1r7FyCNWWKBw3WgVlBXXw/pub?embedded=true"></iframe>
+```
