@@ -3,11 +3,42 @@ title: "Agenda"
 ---
 
 
+# Slides
+All slides are available at
+<https://github.com/sr320/course-ASI-2024/tree/main/slides>
+
+# Grading
+This course will be graded. Each day there will be a quiz worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms. 
+
+## Presentation 
+For the presentation students will select two papers on a
+
+
+
+# Students
+
+| No. | Name            | Last Name | Email                        | Title/Position                                         |
+|-----|-----------------|-----------|------------------------------|--------------------------------------------------------|
+| 1   | Juan Francisco  | Araya     | jfaraya@u.uchile.cl          | PhD (c) in Systematics and Biodiversity                |
+| 2   | Sindy           | Díaz      | sidiaz2023@udec.cl           | PhD Student MaReA                                      |
+| 3   | Krystel         | Susaya    | ksusaya2023@udec.cl          | MSc Student in Oceanography                            |
+| 4   | Constanza       | Saez      | constanzajasaez@udec.cl      | MSc en Preventive Veterinary Medicine. Research assistant at INCAR |
+| 5   | Pablo           | Oyarzo    | POYARZO2020@udec.cl          |                                                        |
+| 6   | Antonio         | Casuso    | acasuso@udec.cl              | Ph.D. in Cs. mention in Management of Renewable Aquatic Resources (MaReA). |
+| 7   | Jurleys         | Vellojin  | jurleys.vellojin@ifop.cl     | PhD in Aquaculture Sciences, Researcher, IFOP          |
+| 8   | Ailén           | Poza      | pozaailen@inibibb-conicet.gob.ar | PhD in Biology. Postdoc Centro I-Mar, Universidad de Los Lagos |
+| 9   | Diego           | Hernández | diego.jhc@gmail.com          | MSc in Oceanography PUCV                               |
+| 10  | María Fernanda  | Jiménez   | mariafernanda.jimenez@ifop.cl | PhD in Aquaculture, Researcher, IFOP                   |
+| 11  | Daniela         | Díaz      | ddiazibarrola@gmail.com      | PhD Student in Aquaculture Sciences                    |
+| 12  | Ana Verónica    | García    | anaverona.garciacondo@gmail.com | Aquaculture Engineer, Researcher INOCAR               |
+| 13  | Natalie         | Bravo     | nbravos@unprg.edu.pe         | Biologist                                              |
 
 
 
 
-# Biology
+# Plan
+
+## Biology
 
 Objective: Have general understanding of sub-organismal biology, computational framework of class. Gene expression.
 
@@ -25,6 +56,7 @@ Objective: Have general understanding of sub-organismal biology, computational f
 -   Discussion of Reproducible & Open Science
 
 -   Overview of Framework of for Computational Component
+  Need to get GitHub User names 
 
 -   Demonstration: Bash
 
@@ -34,7 +66,11 @@ Objective: Have general understanding of sub-organismal biology, computational f
 
 
 
+
 ## Epigenetics 
+
+
+
 
 
 
@@ -42,11 +78,16 @@ Objective: Have general understanding of sub-organismal biology, computational f
 
 
 
-## Evaluation Science
 
 
+## Evaluation Science @ INCAR
+
+
+- computer work - publishing
 
 ## Presentations
+
+
 
 
 

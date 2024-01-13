@@ -21,20 +21,29 @@ website:
     contents:
       - section: "Logistics"
         contents:
-          - modules/day01.qmd  
+          - modules/day01.qmd
+
       - section: "Computation Basics"
         contents:
           - modules/00-markdown.qmd
           - modules/01-github.qmd
           - modules/02-bash.qmd
           - modules/03-rstudio.qmd
+          
       - section: "Biology and Ecology"
         contents:
-          - modules/day01.qmd
           - modules/10-climate.qmd
+          - modules/20-supp.qmd
+ 
+      - section: "Tutorials"
+        contents:
+          - modules/DRAFT_DNA_methylation.qmd 
+
       - section: "Computer Labs"
         contents:
           - assignments/00-bash.qmd 
+          - assignments/01-blast.qmd
+          - assignments/02-DGE.qmd
           - assignments/01-blast.qmd
           - assignments/02-DGE.qmd
     
