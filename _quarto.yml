@@ -32,6 +32,7 @@ website:
           
       - section: "Biology and Ecology"
         contents:
+          - modules/slidedecks.qmd
           - modules/10-climate.qmd
           - modules/20-supp.qmd
  
