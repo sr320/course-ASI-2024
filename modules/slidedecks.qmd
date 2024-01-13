@@ -1,0 +1,26 @@
+---
+title: "Slidedecks"
+---
+
+
+# Intro
+{{< pdf ../slides/01-intro.pdf width=600 height=400 >}}
+
+# Homeostasis
+{{< pdf ../slides/02-homeostasis.pdf width=600 height=400 >}}
+
+# Temperature
+{{< pdf ../slides/04-temperature.pdf width=600 height=400 >}}
+
+# Host Response
+{{< pdf ../slides/05-host-response.pdf width=600 height=400 >}}
+
+# Disease Selection
+{{< pdf ../slides/06-disease-selection.pdf width=600 height=400 >}}
+
+# Epigentics 01
+{{< pdf ../slides/11-epi-primer.pdf width=600 height=400 >}}
+
+# Epigentics 02
+{{< pdf ../slides/12-epigenetics.pdf width=600 height=400 >}}
+
