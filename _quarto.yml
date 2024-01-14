@@ -40,7 +40,8 @@ website:
  
       - section: "Tutorials"
         contents:
-          - modules/DRAFT_DNA_methylation.qmd 
+          - modules/DRAFT_DNA_methylation.qmd
+          - modules/30-lncRNA.qmd
 
       - section: "Computer Labs"
         contents:
