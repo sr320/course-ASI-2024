@@ -35,6 +35,8 @@ website:
           - modules/slidedecks.qmd
           - modules/10-climate.qmd
           - modules/20-supp.qmd
+          - modules/21-supp.qmd
+          - modules/22-supp.qmd
  
       - section: "Tutorials"
         contents:

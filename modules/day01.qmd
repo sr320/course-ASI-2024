@@ -17,8 +17,9 @@ All slides are available at
 
 
 # Grading
-This course will be graded. Each day there will be a quiz worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms. 
+This course will be graded. There will quizzes worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms. 
 
+- [Quiz 1](https://forms.gle/tkFgrNQ2Qw8HEEhT8) Due 14 Jan
 
 
 ## Presentation 
@@ -63,7 +64,6 @@ Objective: Have general understanding of sub-organismal biology, computational f
 
 -   Cell and Molecular Biology
 
-
 -   Discussion of Reproducible & Open Science
 
 -   Overview of Framework of for Computational Component
@@ -72,7 +72,9 @@ Objective: Have general understanding of sub-organismal biology, computational f
 -   Demonstration: Bash
 
 -   Case Study: Gene Expression
-[Characterization of the Gene Repertoire and Environmentally Driven Expression Patterns in Tanner Crab (Chionoecetes bairdi)](https://gannet.fish.washington.edu/seashell/snaps/s10126-022-10100-8.pdf)
+George, M. N., Cattau, O., Middleton, M. A., Lawson, D., Vadopalas, B., Gavery, M. R., … & Roberts, S. B. (2023). Triploid pacific oysters exhibit stress response dysregulation and elevated mortality following marine heatwaves.. https://doi.org/10.1101/2023.03.02.530828
+
+[PDF](https://gannet.fish.washington.edu/seashell/snaps/Global_Change_Biology_-_2023_-_George_-_Triploid_Pacific_oysters_exhibit_stress_response_dysregulation_and_elevated.pdf)
 
 
 
@@ -80,7 +82,7 @@ Objective: Have general understanding of sub-organismal biology, computational f
 
 ## Epigenetics 
 
-
+Objective: Understand what epigenetics is what
 
 
 
@@ -97,6 +99,10 @@ Objective: Have general understanding of sub-organismal biology, computational f
 - computer work - publishing
 
 ## Presentations
+
+
+
+# Additional Useful Resources
 
 
 

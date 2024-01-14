@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Epigenetic Phenomena Connecting Climate Change and Coastal Marine Species - Remote Computing</title>
+<title>Epigenetic Phenomena Connecting Climate Change and Coastal Marine Species - Epigenetics : Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Remote Computing</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modules/slidedecks.html">Biology and Ecology</a></li><li class="breadcrumb-item"><a href="../modules/21-supp.html">Epigenetics : Basics</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/21-supp.html" class="sidebar-item-text sidebar-link">
+  <a href="../modules/21-supp.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Epigenetics : Basics</span></a>
   </div>
 </li>
@@ -269,29 +269,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#screen-recording" id="toc-screen-recording" class="nav-link active" data-scroll-target="#screen-recording">Screen Recording</a></li>
-  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#remote-machine-access" id="toc-remote-machine-access" class="nav-link" data-scroll-target="#remote-machine-access">Remote Machine Access</a></li>
-  <li><a href="#hyak" id="toc-hyak" class="nav-link" data-scroll-target="#hyak">Hyak</a></li>
-  <li><a href="#bash-and-remote-computing" id="toc-bash-and-remote-computing" class="nav-link" data-scroll-target="#bash-and-remote-computing">Bash and remote computing</a></li>
-  <li><a href="#job-scheduler" id="toc-job-scheduler" class="nav-link" data-scroll-target="#job-scheduler">Job Scheduler</a></li>
-  <li><a href="#miscellany" id="toc-miscellany" class="nav-link" data-scroll-target="#miscellany">Miscellany</a>
-  <ul class="collapse">
-  <li><a href="#reciprocal-blast" id="toc-reciprocal-blast" class="nav-link" data-scroll-target="#reciprocal-blast">Reciprocal BLAST</a></li>
-  <li><a href="#saving-my-pat" id="toc-saving-my-pat" class="nav-link" data-scroll-target="#saving-my-pat">Saving my PAT</a></li>
-  <li><a href="#chat-gpt-in-rstudio" id="toc-chat-gpt-in-rstudio" class="nav-link" data-scroll-target="#chat-gpt-in-rstudio">Chat GPT in Rstudio</a></li>
-  </ul></li>
+  <li><a href="#histone-modification" id="toc-histone-modification" class="nav-link active" data-scroll-target="#histone-modification">Histone Modification</a></li>
+  <li><a href="#short-rnas" id="toc-short-rnas" class="nav-link" data-scroll-target="#short-rnas">Short RNAs</a></li>
+  <li><a href="#long-non-coding-rna" id="toc-long-non-coding-rna" class="nav-link" data-scroll-target="#long-non-coding-rna">Long-non coding RNA</a></li>
+  <li><a href="#dna-methylation" id="toc-dna-methylation" class="nav-link" data-scroll-target="#dna-methylation">DNA Methylation</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sr320/course-ASI-2024/edit/main/lectures/04-remote.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sr320/course-ASI-2024/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sr320/course-ASI-2024/edit/main/modules/21-supp.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sr320/course-ASI-2024/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Remote Computing</h1>
-<p class="subtitle lead">Getting things you need</p>
+<h1 class="title">Epigenetics : Basics</h1>
 </div>
 
 
@@ -306,102 +296,69 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="screen-recording" class="level1">
-<h1>Screen Recording</h1>
-<div class="quarto-figure quarto-figure-right">
-<figure class="figure">
-<p><a href="https://washington.zoom.us/rec/share/HwRp8KfLZ9mX2TOk2bNsiCYWvWiQJwSJOPHhG4tIztoGq5YlHB71pYlsC9O1bWBw.mejKzK3Q0BR-6Zu-"><img src="../img/zoom.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/_aAhcNjmvhc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Xjq5eEslJhw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Webpage: <a href="http://learn.genetics.utah.edu/content/epigenetics/rats/">Why you should lick your rat</a></p>
+<p>#Types</p>
+<section id="histone-modification" class="level2">
+<h2 class="anchored" data-anchor-id="histone-modification">Histone Modification</h2>
+<p>Histone modifications are a key aspect of epigenetics, the study of how genes are regulated without altering the underlying DNA sequence. Histones are proteins around which DNA is wrapped in the cell nucleus. These proteins can be chemically modified in various ways, affecting how tightly or loosely the DNA is wound around them. These modifications include methylation, acetylation, phosphorylation, ubiquitination, and sumoylation, among others.</p>
+<ol type="1">
+<li><p><strong>Methylation:</strong> The addition of methyl groups (CH3) to histones can either activate or repress gene expression, depending on where the methyl group is added. For instance, methylation of histone H3 at lysine 4 (H3K4me) is generally associated with gene activation, while methylation at H3K9 is linked with gene repression.</p></li>
+<li><p><strong>Acetylation:</strong> The addition of acetyl groups (COCH3) to histones typically loosens the DNA-histone interaction, making the DNA more accessible for transcription and thus promoting gene expression. Histone acetyltransferases (HATs) add acetyl groups, while histone deacetylases (HDACs) remove them.</p></li>
+<li><p><strong>Phosphorylation:</strong> The addition of phosphate groups (PO4) to histones can influence various cellular processes, including DNA repair, chromosome condensation during cell division, and gene expression.</p></li>
+<li><p><strong>Ubiquitination and Sumoylation:</strong> These modifications involve adding ubiquitin or SUMO (small ubiquitin-like modifier) proteins to histones, affecting DNA repair, transcriptional regulation, and chromatin organization.</p></li>
+</ol>
+<p>Histone modifications regulate gene expression by altering the chromatin structure. This can either make the DNA more accessible to transcription factors and other proteins that promote transcription (thus activating gene expression) or make it less accessible (thereby repressing gene expression). These modifications do not change the DNA sequence but rather affect how cells interpret genes, contributing to the complexity of gene regulation in eukaryotic organisms.</p>
+<p>Overall, histone modifications are a dynamic and complex means of regulating gene expression, playing crucial roles in development, differentiation, and the response to environmental signals.</p>
 </section>
-<section id="reading" class="level1">
-<h1>Reading</h1>
+<section id="short-rnas" class="level2">
+<h2 class="anchored" data-anchor-id="short-rnas">Short RNAs</h2>
+<p>Short RNAs, also known as small RNAs, are a class of non-coding RNA molecules that are typically 20-30 nucleotides long. They play crucial roles in gene regulation and maintenance of genome stability. The most well-known types of short RNAs include microRNAs (miRNAs), small interfering RNAs (siRNAs), and Piwi-interacting RNAs (piRNAs).</p>
+<ol type="1">
+<li><p><strong>MicroRNAs (miRNAs):</strong> miRNAs are involved in post-transcriptional regulation of gene expression. They bind to complementary sequences on messenger RNA (mRNA) molecules, typically leading to the degradation of the mRNA or inhibition of its translation into proteins. miRNAs are key players in regulating various cellular processes including development, differentiation, cell proliferation, and apoptosis.</p></li>
+<li><p><strong>Small Interfering RNAs (siRNAs):</strong> siRNAs are typically involved in the RNA interference (RNAi) pathway. They originate from long double-stranded RNA precursors and are processed into siRNAs by an enzyme called Dicer. siRNAs are incorporated into the RNA-induced silencing complex (RISC), where they guide the complex to complementary mRNA targets, leading to mRNA cleavage and gene silencing. This mechanism is widely used in research to knock down the expression of specific genes.</p></li>
+<li><p><strong>Piwi-interacting RNAs (piRNAs):</strong> piRNAs are primarily found in animal cells and are associated with the Piwi subfamily of Argonaute proteins. They are involved in the silencing of transposable elements and other repetitive sequences in the genome, particularly in germ cells. This helps in protecting the integrity of the genome.</p></li>
+</ol>
+<p>Apart from these, there are other classes of small RNAs, like small nucleolar RNAs (snoRNAs) and small nuclear RNAs (snRNAs), which are involved in processes like RNA modification (e.g., methylation) and splicing, respectively.</p>
+<p>Overall, short RNAs are fundamental to the regulation of gene expression and maintenance of genomic integrity in cells. They play vital roles in a variety of biological processes and are also being studied for their potential in therapeutic applications, such as in the treatment of diseases like cancer and viral infections.</p>
+</section>
+<section id="long-non-coding-rna" class="level2">
+<h2 class="anchored" data-anchor-id="long-non-coding-rna">Long-non coding RNA</h2>
+<p>Long non-coding RNAs (lncRNAs) are a class of RNA molecules that are typically longer than 200 nucleotides and do not encode proteins. Despite not being translated into proteins, lncRNAs play significant roles in various cellular processes, and their functions are diverse and complex. Here are some key aspects of lncRNAs and their functions:</p>
+<ol type="1">
+<li><p><strong>Regulation of Gene Expression:</strong> LncRNAs can regulate gene expression at multiple levels, including chromatin modification, transcription, and post-transcriptional processing. They can act as guides, scaffolds, decoys, or enhancers, depending on their interaction with DNA, RNA, or proteins.</p>
 <ul>
-<li><p>Textbook: Working with Remote Machines.p 57-64</p></li>
-<li><p>Lab Handbook - <a href="https://robertslab.github.io/resources/mox_Adding-a-User/">Mox Guide</a> (including all subpages under Mox Guide)</p></li>
-</ul>
-</section>
-<section id="objectives" class="level1">
-<h1>Objectives</h1>
-<p>Gain confidence and skill set to access remote computers from the command-line.</p>
-</section>
-<section id="remote-machine-access" class="level1">
-<h1>Remote Machine Access</h1>
-<p>The ability to remotely access computing resources is highly valuable for graduate courses, as it enables students and researchers to access powerful computational facilities and collaborate effectively from anywhere. This remote access enhances learning experiences, promotes research progress, and optimizes resource utilization.</p>
-<p>Key benefits include:</p>
-<ol type="1">
-<li><p>Access to powerful computing resources: Remote access allows students and researchers to work with high-performance computing (HPC) clusters, specialized software, and large-scale data storage without needing to invest in expensive personal hardware.</p></li>
-<li><p>Flexible learning and research: Remote access provides students the freedom to work from any location with internet connectivity, enabling them to fit their studies around personal commitments and schedules.</p></li>
-<li><p>Collaboration and resource sharing: Remote access facilitates collaboration between researchers from different institutions, allowing them to share data, code, and other resources seamlessly.</p></li>
-<li><p>Cost-effectiveness: By centralizing computational resources, institutions can reduce costs associated with maintaining multiple systems and software licenses.</p></li>
-<li><p>Enhanced security: Remote computing resources often have robust security measures in place, ensuring that sensitive data and intellectual property are protected.</p></li>
+<li><strong>As Guides:</strong> LncRNAs can direct ribonucleoprotein complexes to specific genomic loci to modify chromatin and regulate transcription.</li>
+<li><strong>As Scaffolds:</strong> They can bring together multiple proteins to form ribonucleoprotein complexes, influencing the activity and localization of these proteins.</li>
+<li><strong>As Decoys:</strong> LncRNAs can bind to and sequester proteins (like transcription factors or other RNA-binding proteins) away from their usual targets.</li>
+<li><strong>As Enhancers:</strong> Some lncRNAs can enhance gene expression by interacting with enhancer regions of the genome.</li>
+</ul></li>
+<li><p><strong>Epigenetic Regulation:</strong> LncRNAs are involved in epigenetic modifications like DNA methylation and histone modification, thereby influencing gene expression patterns without altering the underlying DNA sequence.</p></li>
+<li><p><strong>Structural Organization:</strong> They contribute to the structural organization of certain cellular compartments and can influence the assembly of macromolecular complexes.</p></li>
+<li><p><strong>X Chromosome Inactivation:</strong> In female mammals, the lncRNA Xist plays a crucial role in X chromosome inactivation, a process by which one of the X chromosomes is silenced to ensure dosage compensation.</p></li>
+<li><p><strong>Alternative Splicing:</strong> LncRNAs can modulate alternative splicing of pre-mRNAs, affecting the diversity of proteins produced in cells.</p></li>
+<li><p><strong>Regulation of mRNA Stability and Translation:</strong> Certain lncRNAs can influence the stability and translation of mRNAs, either by direct interaction or through the recruitment of other regulatory molecules.</p></li>
+<li><p><strong>Cell Differentiation and Development:</strong> LncRNAs are essential in numerous developmental processes, where they guide cell fate decisions and differentiation.</p></li>
+<li><p><strong>Disease Association:</strong> Dysregulation of lncRNAs has been linked to various diseases, including cancers, neurological disorders, and cardiovascular diseases.</p></li>
 </ol>
-<hr>
-<p>Example of SSH to log into a remote machine:</p>
-<p>Secure Shell (SSH) is a widely used protocol for secure remote access to computers. To log into a remote machine using SSH, follow these steps:</p>
+<p>Research into lncRNAs is still a rapidly evolving field. These RNAs are more numerous and diverse than initially thought, and they are increasingly recognized as key regulatory molecules in a wide range of biological processes and diseases. Their complexity and versatility make them important subjects for both basic biological research and potential therapeutic applications.</p>
+</section>
+<section id="dna-methylation" class="level2">
+<h2 class="anchored" data-anchor-id="dna-methylation">DNA Methylation</h2>
+<p>DNA methylation is a crucial epigenetic mechanism involved in regulating gene expression. It typically involves the addition of a methyl group (CH3) to the 5th carbon of the cytosine ring in DNA. This process predominantly occurs in regions of DNA where cytosine nucleotides are followed by guanine nucleotides, known as CpG sites. DNA methylation is catalyzed by enzymes called DNA methyltransferases (DNMTs).</p>
+<p>The functional role of DNA methylation includes:</p>
 <ol type="1">
-<li><p>Open a terminal or command prompt on your local machine.</p></li>
-<li><p>Type the following command, replacing ‘username’ with your remote account username and ‘remote_host’ with the remote machine’s address (e.g., IP address or domain name): <strong><code>ssh username@remote_host</code></strong></p></li>
-<li><p>Press Enter. You may be prompted to accept the remote host’s key fingerprint if this is your first time connecting.</p></li>
-<li><p>Enter your password when prompted. After successful authentication, you will be connected to the remote machine and can begin executing commands.<br>
-</p></li>
+<li><p><strong>Gene Regulation:</strong> DNA methylation can either repress or activate gene expression. Methylation in gene promoter regions generally leads to gene silencing. This is because methylated DNA can inhibit the binding of transcription factors necessary for gene expression, or it can recruit proteins that condense the DNA, making it less accessible for transcription.</p></li>
+<li><p><strong>Development and Differentiation:</strong> DNA methylation patterns are crucial for normal development and cellular differentiation. As cells differentiate, specific genes are methylated or demethylated, which helps in the maintenance of cell-specific gene expression patterns.</p></li>
+<li><p><strong>X-Chromosome Inactivation:</strong> In female mammals, DNA methylation plays a critical role in X-chromosome inactivation, a process by which one of the two X chromosomes in females is silenced to ensure dosage compensation with males, who have only one X chromosome.</p></li>
+<li><p><strong>Imprinting:</strong> Genomic imprinting is a process where only one allele of a gene is expressed while the other is silenced. This silencing is often achieved through DNA methylation. Imprinted genes are crucial for growth and development, especially in the womb.</p></li>
+<li><p><strong>Stability of the Genome:</strong> DNA methylation helps in maintaining genome stability by suppressing the activity of transposable elements, which can move around the genome and cause mutations or chromosomal rearrangements if not properly controlled.</p></li>
+<li><p><strong>Response to Environmental Factors:</strong> Environmental factors can influence DNA methylation patterns, which in turn can affect gene expression. This is one way in which environmental factors can have a long-term impact on an organism’s biology.</p></li>
 </ol>
-</section>
-<section id="hyak" class="level1">
-<h1>Hyak</h1>
-<p>The Hyak computing system at the University of Washington (UW) is a high-performance computing (HPC) cluster designed to support the research and computational needs of UW students, faculty, and staff. Hyak provides advanced computing capabilities to facilitate complex scientific and engineering simulations, data analysis, and other computationally-intensive tasks.</p>
-<p>Key features of the Hyak computing system include:</p>
-<ol type="1">
-<li><p>Scalability: Hyak is designed to be a highly scalable system, accommodating a wide range of workloads, from small-scale computations to large-scale parallel processing jobs.</p></li>
-<li><p>Parallel processing capabilities: The system is equipped with multiple interconnected compute nodes, each with multiple CPU cores and GPUs, enabling efficient parallel computing for tasks that can be distributed across multiple processors.</p></li>
-<li><p>High-speed storage: Hyak offers high-speed storage options, including parallel file systems and high-performance storage tiers, to support data-intensive workloads.</p></li>
-<li><p>High-speed interconnects: The system employs low-latency, high-bandwidth interconnects between compute nodes to ensure efficient data transfer and communication during parallel processing tasks.</p></li>
-<li><p>User-friendly environment: Hyak offers a familiar Linux-based environment, supporting various programming languages, libraries, and tools commonly used in scientific research.</p></li>
-<li><p>Resource allocation and management: Hyak uses a job scheduler (e.g., Slurm) to manage resource allocation and user access, ensuring fair usage and optimal utilization of computing resources.</p></li>
-</ol>
-</section>
-<section id="bash-and-remote-computing" class="level1">
-<h1>Bash and remote computing</h1>
-<p>When working with remote computing, several Bash commands can be particularly useful for managing files, navigating directories, and monitoring system resources. Here are five of the most useful Bash commands:</p>
-<ol type="1">
-<li><p><strong><code>ssh</code></strong>: The <strong><code>ssh</code></strong> command (Secure Shell) is crucial for establishing secure remote connections to other computers. It allows you to log in and execute commands on remote machines. Usage: <strong><code>ssh username@remote_host</code></strong></p></li>
-<li><p><strong><code>scp</code></strong>: The <strong><code>scp</code></strong> command (Secure Copy) enables you to transfer files securely between your local machine and a remote machine, or between two remote machines. Usage: <strong><code>scp source destination</code></strong>, where source and destination can be either local or remote paths, such as <strong><code>username@remote_host:/path/to/file</code></strong>.</p></li>
-<li><p><strong><code>rsync</code></strong>: The <strong><code>rsync</code></strong> command is a versatile tool for synchronizing files and directories between local and remote machines. It optimizes data transfer by only transferring the differences between source and destination files. Usage: <strong><code>rsync options source destination</code></strong>, where source and destination can be either local or remote paths.</p></li>
-<li><p><strong><code>top</code></strong> or <strong><code>htop</code></strong>: The <strong><code>top</code></strong> command provides a real-time, dynamic view of the processes running on a system, including remote machines. It displays information about CPU usage, memory usage, and other system metrics. The <strong><code>htop</code></strong> command is an enhanced version of <strong><code>top</code></strong>, providing a more user-friendly interface with additional features. To use it on a remote machine, simply run <strong><code>ssh username@remote_host top</code></strong> or <strong><code>ssh username@remote_host htop</code></strong>.</p></li>
-</ol>
-<p>These commands, among others, are essential for efficiently working with remote computing resources and managing your workflow when connected to remote machines.</p>
-</section>
-<section id="job-scheduler" class="level1">
-<h1>Job Scheduler</h1>
-<p>A job scheduler, also known as a workload manager or batch scheduler, is a software tool that manages and allocates computational resources within a high-performance computing (HPC) cluster or multi-user computing environment. It is responsible for accepting, prioritizing, and assigning computational jobs submitted by users to the available resources, ensuring efficient utilization and fair distribution of resources among users.</p>
-<p>Slurm (Simple Linux Utility for Resource Management) is an open-source, highly-scalable, and widely-used job scheduler designed for Linux-based HPC clusters. It facilitates the management of computational workloads by handling job submission, scheduling, dispatching, and monitoring tasks. Slurm is fault-tolerant, supporting the efficient execution of jobs across thousands of compute nodes.</p>
-</section>
-<section id="miscellany" class="level1">
-<h1>Miscellany</h1>
-<section id="reciprocal-blast" class="level2">
-<h2 class="anchored" data-anchor-id="reciprocal-blast">Reciprocal BLAST</h2>
-<p>A reciprocal BLAST (Basic Local Alignment Search Tool) analysis is a technique used to identify homologous genes or proteins between two species by performing a BLAST search in both directions. In other words, it involves searching for similarities between a query sequence from species A against a database of sequences from species B, and then searching for similarities between a query sequence from species B against a database of sequences from species A. This approach helps confirm orthology, which is useful in comparative genomics and evolutionary studies.</p>
-<p>Three insightful visualizations of reciprocal BLAST analysis results could be:</p>
-<ol type="1">
-<li><p>Circos Plot: A Circos plot is a circular layout that can display relationships between genomic sequences. In the context of reciprocal BLAST analysis, a Circos plot can effectively illustrate orthologous relationships between two species by connecting homologous genes or proteins with lines or curves. The strength of the connection (e.g., based on similarity scores or e-values) can be represented by the width or color of the lines, providing a comprehensive overview of the conservation between the two genomes.</p></li>
-<li><p>Heatmap: A heatmap is a graphical representation of data where values are represented by colors. In a reciprocal BLAST analysis, a heatmap can be used to visualize the similarity scores or e-values between pairs of orthologous genes or proteins. The rows and columns of the heatmap would represent genes or proteins from species A and species B, respectively, with the color intensity representing the strength of the orthologous relationship. This allows for easy identification of strongly conserved regions or potential functional similarities between the two species.</p></li>
-<li><p>Scatter Plot with Dot Matrix: A scatter plot with dot matrix can visualize the distribution of reciprocal best hits (RBH) based on similarity scores or e-values. The x-axis would represent the scores or e-values for species A against species B, and the y-axis would represent the scores or e-values for species B against species A. Each dot on the plot would represent a pair of orthologs, with its position determined by the score or e-value in both directions. This visualization allows users to identify potential outliers, observe the overall correlation between the two species, and assess the quality of the reciprocal BLAST analysis results.</p></li>
-</ol>
-</section>
-<section id="saving-my-pat" class="level2">
-<h2 class="anchored" data-anchor-id="saving-my-pat">Saving my PAT</h2>
-<ul>
-<li>see <a href="https://happygitwithr.com/https-pat.html?q=password#store-pat" class="uri">https://happygitwithr.com/https-pat.html?q=password#store-pat</a></li>
-</ul>
-<pre><code>install.packages("gitcreds")</code></pre>
-<pre><code>gitcreds::gitcreds_set()</code></pre>
-</section>
-<section id="chat-gpt-in-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="chat-gpt-in-rstudio">Chat GPT in Rstudio</h2>
-<p>Video of <a href="https://washington.zoom.us/rec/share/IVeKgydiIcAOoKVQRj5iG9w2Qu09MgHmvFfc0GiGQLsvoTXUnnUEa4mrS-OclBs.blleXMCwlIFi9aZG">recent lab meeting</a></p>
+<p>Alterations in DNA methylation patterns are associated with various diseases, including cancer, where abnormal hypermethylation of tumor suppressor genes or hypomethylation of oncogenes can occur. Research in this field continues to uncover the complex roles of DNA methylation in health and disease, making it a critical area of study in genetics and epigenetics.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

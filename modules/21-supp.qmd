@@ -1,0 +1,90 @@
+---
+title: "Epigenetics : Basics"
+---
+
+
+{{< video https://www.youtube.com/embed/_aAhcNjmvhc >}}
+
+{{< video https://www.youtube.com/embed/Xjq5eEslJhw >}}
+
+Webpage: [Why you should lick your rat](http://learn.genetics.utah.edu/content/epigenetics/rats/)
+
+#Types
+
+## Histone Modification
+
+Histone modifications are a key aspect of epigenetics, the study of how genes are regulated without altering the underlying DNA sequence. Histones are proteins around which DNA is wrapped in the cell nucleus. These proteins can be chemically modified in various ways, affecting how tightly or loosely the DNA is wound around them. These modifications include methylation, acetylation, phosphorylation, ubiquitination, and sumoylation, among others.
+
+1.  **Methylation:** The addition of methyl groups (CH3) to histones can either activate or repress gene expression, depending on where the methyl group is added. For instance, methylation of histone H3 at lysine 4 (H3K4me) is generally associated with gene activation, while methylation at H3K9 is linked with gene repression.
+
+2.  **Acetylation:** The addition of acetyl groups (COCH3) to histones typically loosens the DNA-histone interaction, making the DNA more accessible for transcription and thus promoting gene expression. Histone acetyltransferases (HATs) add acetyl groups, while histone deacetylases (HDACs) remove them.
+
+3.  **Phosphorylation:** The addition of phosphate groups (PO4) to histones can influence various cellular processes, including DNA repair, chromosome condensation during cell division, and gene expression.
+
+4.  **Ubiquitination and Sumoylation:** These modifications involve adding ubiquitin or SUMO (small ubiquitin-like modifier) proteins to histones, affecting DNA repair, transcriptional regulation, and chromatin organization.
+
+Histone modifications regulate gene expression by altering the chromatin structure. This can either make the DNA more accessible to transcription factors and other proteins that promote transcription (thus activating gene expression) or make it less accessible (thereby repressing gene expression). These modifications do not change the DNA sequence but rather affect how cells interpret genes, contributing to the complexity of gene regulation in eukaryotic organisms.
+
+Overall, histone modifications are a dynamic and complex means of regulating gene expression, playing crucial roles in development, differentiation, and the response to environmental signals.
+
+## Short RNAs
+
+Short RNAs, also known as small RNAs, are a class of non-coding RNA molecules that are typically 20-30 nucleotides long. They play crucial roles in gene regulation and maintenance of genome stability. The most well-known types of short RNAs include microRNAs (miRNAs), small interfering RNAs (siRNAs), and Piwi-interacting RNAs (piRNAs).
+
+1.  **MicroRNAs (miRNAs):** miRNAs are involved in post-transcriptional regulation of gene expression. They bind to complementary sequences on messenger RNA (mRNA) molecules, typically leading to the degradation of the mRNA or inhibition of its translation into proteins. miRNAs are key players in regulating various cellular processes including development, differentiation, cell proliferation, and apoptosis.
+
+2.  **Small Interfering RNAs (siRNAs):** siRNAs are typically involved in the RNA interference (RNAi) pathway. They originate from long double-stranded RNA precursors and are processed into siRNAs by an enzyme called Dicer. siRNAs are incorporated into the RNA-induced silencing complex (RISC), where they guide the complex to complementary mRNA targets, leading to mRNA cleavage and gene silencing. This mechanism is widely used in research to knock down the expression of specific genes.
+
+3.  **Piwi-interacting RNAs (piRNAs):** piRNAs are primarily found in animal cells and are associated with the Piwi subfamily of Argonaute proteins. They are involved in the silencing of transposable elements and other repetitive sequences in the genome, particularly in germ cells. This helps in protecting the integrity of the genome.
+
+Apart from these, there are other classes of small RNAs, like small nucleolar RNAs (snoRNAs) and small nuclear RNAs (snRNAs), which are involved in processes like RNA modification (e.g., methylation) and splicing, respectively.
+
+Overall, short RNAs are fundamental to the regulation of gene expression and maintenance of genomic integrity in cells. They play vital roles in a variety of biological processes and are also being studied for their potential in therapeutic applications, such as in the treatment of diseases like cancer and viral infections.
+
+## Long-non coding RNA
+
+Long non-coding RNAs (lncRNAs) are a class of RNA molecules that are typically longer than 200 nucleotides and do not encode proteins. Despite not being translated into proteins, lncRNAs play significant roles in various cellular processes, and their functions are diverse and complex. Here are some key aspects of lncRNAs and their functions:
+
+1.  **Regulation of Gene Expression:** LncRNAs can regulate gene expression at multiple levels, including chromatin modification, transcription, and post-transcriptional processing. They can act as guides, scaffolds, decoys, or enhancers, depending on their interaction with DNA, RNA, or proteins.
+
+    -   **As Guides:** LncRNAs can direct ribonucleoprotein complexes to specific genomic loci to modify chromatin and regulate transcription.
+    -   **As Scaffolds:** They can bring together multiple proteins to form ribonucleoprotein complexes, influencing the activity and localization of these proteins.
+    -   **As Decoys:** LncRNAs can bind to and sequester proteins (like transcription factors or other RNA-binding proteins) away from their usual targets.
+    -   **As Enhancers:** Some lncRNAs can enhance gene expression by interacting with enhancer regions of the genome.
+
+2.  **Epigenetic Regulation:** LncRNAs are involved in epigenetic modifications like DNA methylation and histone modification, thereby influencing gene expression patterns without altering the underlying DNA sequence.
+
+3.  **Structural Organization:** They contribute to the structural organization of certain cellular compartments and can influence the assembly of macromolecular complexes.
+
+4.  **X Chromosome Inactivation:** In female mammals, the lncRNA Xist plays a crucial role in X chromosome inactivation, a process by which one of the X chromosomes is silenced to ensure dosage compensation.
+
+5.  **Alternative Splicing:** LncRNAs can modulate alternative splicing of pre-mRNAs, affecting the diversity of proteins produced in cells.
+
+6.  **Regulation of mRNA Stability and Translation:** Certain lncRNAs can influence the stability and translation of mRNAs, either by direct interaction or through the recruitment of other regulatory molecules.
+
+7.  **Cell Differentiation and Development:** LncRNAs are essential in numerous developmental processes, where they guide cell fate decisions and differentiation.
+
+8.  **Disease Association:** Dysregulation of lncRNAs has been linked to various diseases, including cancers, neurological disorders, and cardiovascular diseases.
+
+Research into lncRNAs is still a rapidly evolving field. These RNAs are more numerous and diverse than initially thought, and they are increasingly recognized as key regulatory molecules in a wide range of biological processes and diseases. Their complexity and versatility make them important subjects for both basic biological research and potential therapeutic applications.
+
+## DNA Methylation
+
+DNA methylation is a crucial epigenetic mechanism involved in regulating gene expression. It typically involves the addition of a methyl group (CH3) to the 5th carbon of the cytosine ring in DNA. This process predominantly occurs in regions of DNA where cytosine nucleotides are followed by guanine nucleotides, known as CpG sites. DNA methylation is catalyzed by enzymes called DNA methyltransferases (DNMTs).
+
+The functional role of DNA methylation includes:
+
+1.  **Gene Regulation:** DNA methylation can either repress or activate gene expression. Methylation in gene promoter regions generally leads to gene silencing. This is because methylated DNA can inhibit the binding of transcription factors necessary for gene expression, or it can recruit proteins that condense the DNA, making it less accessible for transcription.
+
+2.  **Development and Differentiation:** DNA methylation patterns are crucial for normal development and cellular differentiation. As cells differentiate, specific genes are methylated or demethylated, which helps in the maintenance of cell-specific gene expression patterns.
+
+3.  **X-Chromosome Inactivation:** In female mammals, DNA methylation plays a critical role in X-chromosome inactivation, a process by which one of the two X chromosomes in females is silenced to ensure dosage compensation with males, who have only one X chromosome.
+
+4.  **Imprinting:** Genomic imprinting is a process where only one allele of a gene is expressed while the other is silenced. This silencing is often achieved through DNA methylation. Imprinted genes are crucial for growth and development, especially in the womb.
+
+5.  **Stability of the Genome:** DNA methylation helps in maintaining genome stability by suppressing the activity of transposable elements, which can move around the genome and cause mutations or chromosomal rearrangements if not properly controlled.
+
+6.  **Response to Environmental Factors:** Environmental factors can influence DNA methylation patterns, which in turn can affect gene expression. This is one way in which environmental factors can have a long-term impact on an organism's biology.
+
+Alterations in DNA methylation patterns are associated with various diseases, including cancer, where abnormal hypermethylation of tumor suppressor genes or hypomethylation of oncogenes can occur. Research in this field continues to uncover the complex roles of DNA methylation in health and disease, making it a critical area of study in genetics and epigenetics.
+
