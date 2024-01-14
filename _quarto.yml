@@ -47,8 +47,9 @@ website:
           - assignments/00-bash.qmd 
           - assignments/01-blast.qmd
           - assignments/02-DGE.qmd
-          - assignments/01-blast.qmd
-          - assignments/02-DGE.qmd
+          - assignments/06-rnaseq-snp.qmd
+          - assignments/07-CG.qmd
+          - assignments/08-bedtools.qmd
     
 format:
   html:
