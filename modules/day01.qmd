@@ -3,16 +3,13 @@ title: "Agenda"
 ---
 
 
-# Slides
-All slides are available at
-<https://github.com/sr320/course-ASI-2024/tree/main/slides>
-
-# Notepads
+# Notepad
 
 [google docs notepad](https://docs.google.com/document/d/1hEh-KW_sLq0EjMR5IuQjB8H629X2exJZbFefLs6upqE/edit?usp=sharing)
 
-
-
+# Slides
+All slides are available at
+<https://github.com/sr320/course-ASI-2024/tree/main/slides>
 
 
 
@@ -22,9 +19,8 @@ This course will be graded. There will quizzes worth 15 pts and on the final day
 - [Quiz 1](https://forms.gle/tkFgrNQ2Qw8HEEhT8) Due 14 Jan
 
 
-## Presentation 
-For the presentation students will select two papers on a
 
+## Presentations
 
 
 # Students
@@ -72,9 +68,7 @@ Objective: Have general understanding of sub-organismal biology, computational f
 -   Demonstration: Bash
 
 -   Case Study: Gene Expression
-George, M. N., Cattau, O., Middleton, M. A., Lawson, D., Vadopalas, B., Gavery, M. R., … & Roberts, S. B. (2023). Triploid pacific oysters exhibit stress response dysregulation and elevated mortality following marine heatwaves.. https://doi.org/10.1101/2023.03.02.530828
-
-[PDF](https://gannet.fish.washington.edu/seashell/snaps/Global_Change_Biology_-_2023_-_George_-_Triploid_Pacific_oysters_exhibit_stress_response_dysregulation_and_elevated.pdf)
+George, M. N., Cattau, O., Middleton, M. A., Lawson, D., Vadopalas, B., Gavery, M. R., … & Roberts, S. B. (2023). Triploid pacific oysters exhibit stress response dysregulation and elevated mortality following marine heatwaves.. https://doi.org/10.1101/2023.03.02.530828 [PDF](https://gannet.fish.washington.edu/seashell/snaps/Global_Change_Biology_-_2023_-_George_-_Triploid_Pacific_oysters_exhibit_stress_response_dysregulation_and_elevated.pdf)
 
 
 
@@ -82,23 +76,6 @@ George, M. N., Cattau, O., Middleton, M. A., Lawson, D., Vadopalas, B., Gavery, 
 
 ## Epigenetics 
 
-Objective: Understand what epigenetics is what
-
-
-
-
-## Epigenetic Applications
-
-
-
-
-
-## Evaluation Science @ INCAR
-
-
-- computer work - publishing
-
-## Presentations
 
 
 
