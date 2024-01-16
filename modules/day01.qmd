@@ -25,12 +25,12 @@ This course will be graded. There will quizzes worth 15 pts and on the final day
 
 ## Presentations
 
-On Friday you will give a presentation to the class. For this presentation you will give a presentation on how a taxa or coastal system could be impacted be climate change and how you would     
-1) assess the impact on the organism and/or system with using any molecular biology    
+On Friday you will give a presentation to the class. The presentation should be about 10-15 minutes long and should include at least one reference. For this assignment you will give a presentation on how a taxa or coastal system could be impacted by climate change and how you would     
+1) assess the impact on the organism and/or system without using any molecular biology    
 2) assess the impact on the organism and/or system with using genomic technigues that could include gene expression and epigenetics mechanisms.    
-3) include what possible results might look like and how you would interpret them     
+3) include what possible results might look like for both 1 and 2 and how you would interpret them     
 4) be sure to include any caveats or stipulations (eg "however another explanation might be xxxxxxx)     
-5) Conclude your talk by discussing the implication and what the species or system might look like in 10 year.
+5) Conclude your talk by discussing the possible implications and what the species or system might look like in 10 year. This could include suggested interventions to change to outcome.
 
 
 
@@ -42,7 +42,7 @@ Roberts Lab website: <https://faculty.washington.edu/sr320/>
 
 Roberts Lab handbook: <https://robertslab.github.io/resources/>
 
-
+GitHub Organizaton: <https://github.com/course-ASI-2024>
 
 
 
