@@ -18,6 +18,22 @@ This course will be graded. There will quizzes worth 15 pts and on the final day
 
 - [Quiz 1](https://forms.gle/tkFgrNQ2Qw8HEEhT8) Due 14 Jan
 - [Quiz 2](https://forms.gle/RiUEqEurwSVQyZBdA) Due 15 Jan
+- [Quiz 3](https://forms.gle/VR5TnDug2ACEZQ9EA) Due 16 Jan
+
+
+
+
+## Presentations
+
+On Friday you will give a presentation to the class. For this presentation you will give a presentation on how a taxa or coastal system could be impacted be climate change and how you would     
+1) assess the impact on the organism and/or system with using any molecular biology    
+2) assess the impact on the organism and/or system with using genomic technigues that could include gene expression and epigenetics mechanisms.    
+3) include what possible results might look like and how you would interpret them     
+4) be sure to include any caveats or stipulations (eg "however another explanation might be xxxxxxx)     
+5) Conclude your talk by discussing the implication and what the species or system might look like in 10 year.
+
+
+
 
 
 # Other useful links:
@@ -31,8 +47,6 @@ Roberts Lab handbook: <https://robertslab.github.io/resources/>
 
 
 
-
-## Presentations
 
 
 # Students
@@ -53,45 +67,6 @@ Roberts Lab handbook: <https://robertslab.github.io/resources/>
 | 12  | Ana Verónica    | García    | anaverona.garciacondo@gmail.com | Aquaculture Engineer, Researcher INOCAR               |
 | 13  | Natalie         | Bravo     | nbravos@unprg.edu.pe         | Biologist                                              |
 
-
-
-
-# Plan
-
-## Biology
-
-Objective: Have general understanding of sub-organismal biology, computational framework of class. Gene expression.
-
--   [Course Description](/index.qmd)
-
--   Instructor Background
-
--   Class Background and Interests
-
--   Homeostasis
-
--   Cell and Molecular Biology
-
--   Discussion of Reproducible & Open Science
-
--   Overview of Framework of for Computational Component
-  Need to get GitHub User names 
-
--   Demonstration: Bash
-
--   Case Study: Gene Expression
-George, M. N., Cattau, O., Middleton, M. A., Lawson, D., Vadopalas, B., Gavery, M. R., … & Roberts, S. B. (2023). Triploid pacific oysters exhibit stress response dysregulation and elevated mortality following marine heatwaves.. https://doi.org/10.1101/2023.03.02.530828 [PDF](https://gannet.fish.washington.edu/seashell/snaps/Global_Change_Biology_-_2023_-_George_-_Triploid_Pacific_oysters_exhibit_stress_response_dysregulation_and_elevated.pdf)
-
-
-
-
-
-## Epigenetics 
-
-
-
-
-# Additional Useful Resources
 
 
 
