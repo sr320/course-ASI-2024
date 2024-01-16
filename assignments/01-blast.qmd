@@ -152,13 +152,29 @@ library("kableExtra")
 bltabl <- read.csv("../output/Ab_4-uniprot_blastx_sep.tab", sep = '\t', header = FALSE)
 ```
 
+```{bash, eval=FALSE}
+cd ../data
+curl -O https://gannet.fish.washington.edu/seashell/snaps/uniprot_table_r2023_01.tab
+```
+
+
 ```{r, eval=FALSE, cache=TRUE}
-spgo <- read.csv("https://gannet.fish.washington.edu/seashell/snaps/uniprot_table_r2023_01.tab", sep = '\t', header = TRUE)
+spgo <- read.csv("../data/uniprot_table_r2023_01.tab", sep = '\t', header = TRUE)
 ```
 
 ```{r, eval=FALSE}
 str(spgo)
 ```
+
+```{r, eval=FALSE}
+annot_tab <-
+  left_join(bltabl, spgo,  by = c("V3" = "Entry")) %>%
+  select(V1, V3, V13, Protein.names, Organism, Gene.Ontology..biological.process., Gene.Ontology.IDs) %>% mutate(V1 = str_replace_all(V1, 
+            pattern = "solid0078_20110412_FRAG_BC_WHITE_WHITE_F3_QV_SE_trimmed", replacement = "Ab"))
+```
+
+
+
 
 ```{r, eval=FALSE}
 
