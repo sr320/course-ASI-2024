@@ -11,14 +11,10 @@ format:
     code-overflow: wrap
 ---
 
-# Screen Recording
-
-[![](/img/zoom.png){fig-align="right"}](https://washington.zoom.us/rec/share/U0F0-YmBjwJyA-7GKQwi3Ilai3aU5bLcxSPseOVhYhH0Xq-8n7HiQvbYoHXy-Cn8.0Sjt_Lx8bzW4sJL8)
-
 ::: callout-important
 ## Assignment
 
-Create and inspect and alignment files. Including visualizing and capturing "outside" graphics. Publish notebook in rpubs and provide link at top of code.
+Create and inspect and alignment files. 
 :::
 
 # Task 1
@@ -31,8 +27,8 @@ Looking at Alignment Files
 Reminder - these are big files, be sure to ignore on commit.
 :::
 
-````         
-```{{r, engine='bash'}}         
+````
+```{{r, engine='bash'}}       
 cd ../data
 curl -O https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/120321-cvBS/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam
 curl -O https://gannet.fish.washington.edu/seashell/bu-mox/scrubbed/120321-cvBS/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam.bai
@@ -57,16 +53,12 @@ Run the following in Terminal as is interactive
 ../data/GCF_002022765.2_C_virginica-3.0_genomic.fa
 ```
 
-## Capture Image
-
-Take a screen shot of the `tview` display and place in your notebook.
 
 # Task II
 
-Aligning WGS data and visualizing in IGV
+Aligning WGS data 
 
 ````         
-
 ```{{r, engine='bash'}}
 cd ../data
 curl -O https://owl.fish.washington.edu/nightingales/C_gigas/F143n08_R2_001.fastq.gz
@@ -82,8 +74,7 @@ curl -O https://gannet.fish.washington.edu/panopea/Cg-roslin/GCF_902806645.1_cgi
 ````
 
 ## Alignment
-
-````         
+````
 ```{{r, engine='bash'}}
 /home/shared/hisat2-2.2.1/hisat2-build \
 -f ../data/cgigas_uk_roslin_v1_genomic-mito.fa \
@@ -99,16 +90,15 @@ curl -O https://gannet.fish.washington.edu/panopea/Cg-roslin/GCF_902806645.1_cgi
 -S ../output/F143_cgigas.sam
 ```
 ````
-
 Take a look
 
-````         
+
+````
 ```{{r, engine='bash'}}
 tail -1 ../output/F143_cgigas.sam
 ```
-````
 
-````         
+      
 
 ```{{r, engine='bash'}}
 # Convert SAM to BAM, using 4 additional threads
@@ -127,6 +117,9 @@ tail -1 ../output/F143_cgigas.sam
 ```
 ````
 
+
+# Find SNPs
+
 ## mpileup
 
 ::: callout-note
@@ -134,7 +127,6 @@ tail -1 ../output/F143_cgigas.sam
 :::
 
 ````         
-
 
 ```{{r, engine='bash'}}
 /home/shared/bcftools-1.14/bcftools mpileup --threads 4 --no-BAQ \
@@ -156,25 +148,8 @@ cat ../output/F143_mpileup_output.txt \
 ```{{r, engine='bash'}}
 zgrep "^##" -v ../output/F143_mpile.vcf.gz | \
 awk 'BEGIN{OFS="\t"} {split($8, a, ";"); print $1,$2,$4,$5,$6,a[1],$9,$10}' | head
-
-```
-
-
-The code below might not work. That is fine. The VCF in the above chunk can be used for visualization in IGV.
-
-```{{r, engine='bash'}}
-/home/shared/bcftools-1.14/bcftools call \
--v -c ../output/F143_mpile.vcf.gz \
-> ../output/F143_mpile_calls.vcf
 ```
 ````
 
-## Visualize
 
-these data in IGV and get a few cool snapshots.
 
-Minimally show bam file, and at least 2 genome feature files.
-
-Bonus for annotating screenshots.
-
-Useful link: <https://robertslab.github.io/resources/Genomic-Resources/#crassostrea-gigas-cgigas_uk_roslin_v1>

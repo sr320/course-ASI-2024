@@ -23,7 +23,6 @@ For this assignment you will be taking RNA-seq reads off the sequencer, and dete
 Generate a plot and table of differentially expressed genes.
 :::
 
-
 # Software
 
 For this assignment we will be using [kallisto](https://pachterlab.github.io/kallisto/) (bash), DESeq2 (r).
@@ -121,12 +120,12 @@ When accessing raven off-campus you have to use [Husky OnNet](https://itconnect.
 
 This code grabs the Pacific oyster fasta file of genes and does so ignoring the fact that *gannet* does not have a security certificate to authenticate (`--insecure`). This is usually not recommended however we know the server.
 
-````         
+      
 ``` {{bash}}
 cd ../data
 curl --insecure -O https://gannet.fish.washington.edu/seashell/bu-github/nb-2023/Cgigas/data/rna.fna
 ```
-````
+
 
 ::: callout-note
 Creating index can take some time
@@ -134,14 +133,14 @@ Creating index can take some time
 
 This code is indexing the file `rna.fna` while also renaming it as `cgigas_roslin_rna.index`.
 
-````         
+       
 ``` {{bash}}
 /home/shared/kallisto/kallisto \
 index -i \
 ../data/cgigas_roslin_rna.index \
 ../data/rna.fna
 ```
-````
+
 
 ## Downloading sequence reads
 
@@ -177,7 +176,7 @@ Sequence reads are on a public server at https://gannet.fish.washington.edu/seas
 
 This code uses recursive feature of `wget` (see this weeks' reading) to get all 24 files. Additionally as with `curl` above we are ignoring the fact there is not security certificate with `--no-check-certificate`
 
-``` bash
+``` {{bash}}
 cd ../data 
 wget --recursive --no-parent --no-directories \
 --no-check-certificate \
@@ -199,7 +198,7 @@ Then performs the following steps:
 -   `--single -l 100 -s 10`: Specify that the input file contains single-end reads (--single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).
 -   The input file to process is specified using the {} placeholder, which is replaced by the base filename from the previous step.
 
-````         
+        
 ``` {{bash}}
 mkdir ../output/kallisto_01
 
@@ -210,7 +209,7 @@ quant -i ../data/cgigas_roslin_rna.index \
 -t 40 \
 --single -l 100 -s 10 ../data/{}_L001_R1_001.fastq.gz
 ```
-````
+
 
 This command runs the `abundance_estimates_to_matrix.pl` script from the Trinity RNA-seq assembly software package to create a gene expression matrix from kallisto output files.
 
@@ -223,7 +222,7 @@ The specific options and arguments used in the command are as follows:
 -   `--name_sample_by_basedir`: Use the sample directory name (i.e., the final directory in the input file paths) as the sample name in the output matrix.\
 -   And then there are the kallisto abundance files to use as input for creating the gene expression matrix.
 
-````         
+         
 ``` {{bash}}
 perl /home/shared/trinityrnaseq-v2.12.0/util/abundance_estimates_to_matrix.pl \
 --est_method kallisto \
@@ -255,7 +254,7 @@ perl /home/shared/trinityrnaseq-v2.12.0/util/abundance_estimates_to_matrix.pl \
     ../output/kallisto_01/N57_S191/abundance.tsv \
     ../output/kallisto_01/N59_S189/abundance.tsv
 ```
-````
+
 
 # Running DESeq2
 
@@ -273,7 +272,7 @@ The below code could be a single script (or single chunk). I like separating to 
 
 Load packages:
 
-````         
+     
 ``` {{r}}
 library(DESeq2)
 library(tidyverse)
@@ -281,42 +280,42 @@ library(pheatmap)
 library(RColorBrewer)
 library(data.table)
 ```
-````
+
 
 Might need to install first eg
 
-````         
+       
 ``` {{r}}
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("DESeq2")
 ```
-````
+
 
 ### Read in count matrix
 
-````         
+        
 ``` {{r}}
 countmatrix <- read.delim("../output/kallisto_01.isoform.counts.matrix", header = TRUE, sep = '\t')
 rownames(countmatrix) <- countmatrix$X
 countmatrix <- countmatrix[,-1]
 head(countmatrix)
 ```
-````
+
 
 Round integers up to hole numbers for further analysis:
 
-````         
+      
 ``` {{r}}
 countmatrix <- round(countmatrix, 0)
 str(countmatrix)
 ```
-````
+
 
 ## Get DEGs based on Desication
 
-````         
+        
 ``` {{r}}
 deseq2.colData <- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), 
                              type=factor(rep("single-read", 24)))
@@ -325,30 +324,26 @@ deseq2.dds <- DESeqDataSetFromMatrix(countData = countmatrix,
                                      colData = deseq2.colData, 
                                      design = ~ condition)
 ```
-````
 
-````         
+
+        
 ``` {{r}}
 deseq2.dds <- DESeq(deseq2.dds)
 deseq2.res <- results(deseq2.dds)
 deseq2.res <- deseq2.res[order(rownames(deseq2.res)), ]
 ```
-````
 
-````         
+
+        
 ``` {{r}}
 head(deseq2.res)
 ```
-````
-
-````         
+        
 ``` {{r}}
 # Count number of hits with adjusted p-value less then 0.05
 dim(deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ])
 ```
-````
-
-````         
+       
 ``` {{r}}
 tmp <- deseq2.res
 # The main plot
@@ -362,10 +357,8 @@ points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="red")
 # 2 FC lines
 abline(h=c(-1,1), col="blue")
 ```
-````
-
-````         
+       
 ``` {{r}}
 write.table(tmp.sig, "../output/DEGlist.tab", row.names = T)
 ```
-````
+
