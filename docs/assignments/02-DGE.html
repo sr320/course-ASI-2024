@@ -622,7 +622,7 @@ Note
 <ul>
 <li><code>-i ../data/cgigas_roslin_rna.index</code>: Use the kallisto index file located at <code>../data/cgigas_roslin_rna.index</code>.</li>
 <li><code>-o ../output/kallisto_01/{}</code>: Write the output files to a directory called <code>../output/kallisto_01/</code> with a subdirectory named after the base filename of the input file (the {} is a placeholder for the base filename).</li>
-<li><code>-t 40</code>: Use 40 threads for the computation.</li>
+<li><code>-t 4</code>: Use 4 threads for the computation.</li>
 <li><code>--single -l 100 -s 10</code>: Specify that the input file contains single-end reads (–single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).</li>
 <li>The input file to process is specified using the {} placeholder, which is replaced by the base filename from the previous step.</li>
 </ul>
@@ -633,7 +633,7 @@ Note
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">|</span> <span class="fu">xargs</span> basename <span class="at">-s</span> _L001_R1_001.fastq.gz <span class="kw">|</span> <span class="fu">xargs</span> <span class="at">-I{}</span> /home/shared/kallisto/kallisto <span class="dt">\</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>quant <span class="at">-i</span> ../data/cgigas_roslin_rna.index <span class="dt">\</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>-o ../output/kallisto_01/{} <span class="dt">\</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>-t 40 <span class="dt">\</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>-t 4 <span class="dt">\</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>--single <span class="at">-l</span> 100 <span class="at">-s</span> 10 ../data/{}_L001_R1_001.fastq.gz</span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This command runs the <code>abundance_estimates_to_matrix.pl</code> script from the Trinity RNA-seq assembly software package to create a gene expression matrix from kallisto output files.</p>
@@ -1369,7 +1369,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb21-194"><a href="#cb21-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-195"><a href="#cb21-195" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`-i ../data/cgigas_roslin_rna.index`</span>: Use the kallisto index file located at <span class="in">`../data/cgigas_roslin_rna.index`</span>.</span>
 <span id="cb21-196"><a href="#cb21-196" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`-o ../output/kallisto_01/{}`</span>: Write the output files to a directory called <span class="in">`../output/kallisto_01/`</span> with a subdirectory named after the base filename of the input file (the {} is a placeholder for the base filename).</span>
-<span id="cb21-197"><a href="#cb21-197" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`-t 40`</span>: Use 40 threads for the computation.</span>
+<span id="cb21-197"><a href="#cb21-197" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`-t 4`</span>: Use 4 threads for the computation.</span>
 <span id="cb21-198"><a href="#cb21-198" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`--single -l 100 -s 10`</span>: Specify that the input file contains single-end reads (--single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).</span>
 <span id="cb21-199"><a href="#cb21-199" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>The input file to process is specified using the {} placeholder, which is replaced by the base filename from the previous step.</span>
 <span id="cb21-200"><a href="#cb21-200" aria-hidden="true" tabindex="-1"></a></span>
@@ -1381,7 +1381,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb21-206"><a href="#cb21-206" aria-hidden="true" tabindex="-1"></a><span class="in">| xargs basename -s _L001_R1_001.fastq.gz | xargs -I{} /home/shared/kallisto/kallisto \</span></span>
 <span id="cb21-207"><a href="#cb21-207" aria-hidden="true" tabindex="-1"></a><span class="in">quant -i ../data/cgigas_roslin_rna.index \</span></span>
 <span id="cb21-208"><a href="#cb21-208" aria-hidden="true" tabindex="-1"></a><span class="in">-o ../output/kallisto_01/{} \</span></span>
-<span id="cb21-209"><a href="#cb21-209" aria-hidden="true" tabindex="-1"></a><span class="in">-t 40 \</span></span>
+<span id="cb21-209"><a href="#cb21-209" aria-hidden="true" tabindex="-1"></a><span class="in">-t 4 \</span></span>
 <span id="cb21-210"><a href="#cb21-210" aria-hidden="true" tabindex="-1"></a><span class="in">--single -l 100 -s 10 ../data/{}_L001_R1_001.fastq.gz</span></span>
 <span id="cb21-211"><a href="#cb21-211" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb21-212"><a href="#cb21-212" aria-hidden="true" tabindex="-1"></a></span>

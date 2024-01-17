@@ -194,7 +194,7 @@ Then performs the following steps:
 
 -   `-i ../data/cgigas_roslin_rna.index`: Use the kallisto index file located at `../data/cgigas_roslin_rna.index`.
 -   `-o ../output/kallisto_01/{}`: Write the output files to a directory called `../output/kallisto_01/` with a subdirectory named after the base filename of the input file (the {} is a placeholder for the base filename).
--   `-t 40`: Use 40 threads for the computation.
+-   `-t 4`: Use 4 threads for the computation.
 -   `--single -l 100 -s 10`: Specify that the input file contains single-end reads (--single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).
 -   The input file to process is specified using the {} placeholder, which is replaced by the base filename from the previous step.
 
@@ -206,7 +206,7 @@ find ../data/*fastq.gz \
 | xargs basename -s _L001_R1_001.fastq.gz | xargs -I{} /home/shared/kallisto/kallisto \
 quant -i ../data/cgigas_roslin_rna.index \
 -o ../output/kallisto_01/{} \
--t 40 \
+-t 4 \
 --single -l 100 -s 10 ../data/{}_L001_R1_001.fastq.gz
 ```
 
