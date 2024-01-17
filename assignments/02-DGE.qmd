@@ -120,12 +120,12 @@ When accessing raven off-campus you have to use [Husky OnNet](https://itconnect.
 
 This code grabs the Pacific oyster fasta file of genes and does so ignoring the fact that *gannet* does not have a security certificate to authenticate (`--insecure`). This is usually not recommended however we know the server.
 
-      
+````         
 ``` {{bash}}
 cd ../data
 curl --insecure -O https://gannet.fish.washington.edu/seashell/bu-github/nb-2023/Cgigas/data/rna.fna
 ```
-
+````
 
 ::: callout-note
 Creating index can take some time
@@ -133,14 +133,14 @@ Creating index can take some time
 
 This code is indexing the file `rna.fna` while also renaming it as `cgigas_roslin_rna.index`.
 
-       
+````         
 ``` {{bash}}
 /home/shared/kallisto/kallisto \
 index -i \
 ../data/cgigas_roslin_rna.index \
 ../data/rna.fna
 ```
-
+````
 
 ## Downloading sequence reads
 
@@ -176,6 +176,7 @@ Sequence reads are on a public server at https://gannet.fish.washington.edu/seas
 
 This code uses recursive feature of `wget` (see this weeks' reading) to get all 24 files. Additionally as with `curl` above we are ignoring the fact there is not security certificate with `--no-check-certificate`
 
+````         
 ``` {{bash}}
 cd ../data 
 wget --recursive --no-parent --no-directories \
@@ -183,22 +184,43 @@ wget --recursive --no-parent --no-directories \
 --accept '*.fastq.gz' \
 https://gannet.fish.washington.edu/seashell/bu-github/nb-2023/Cgigas/data/nopp/
 ```
+````
 
 The next chunk first creates a subdirectory
 
 Then performs the following steps:
 
-1.  Uses the `find` utility to search for all files in the `../data/` directory that match the pattern `*fastq.gz`.\
-2.  Uses the `basename` command to extract the base filename of each file (i.e., the filename without the directory path), and removes the suffix `_L001_R1_001.fastq.gz`.
-3.  Runs the kallisto `quant` command on each input file, with the following options:
+The **`xargs`** command in Unix-like systems is used to build and execute command lines from standard input. It's often combined with other commands to perform complex operations. In your example, **`xargs`** is used twice in a pipeline that starts with the **`find`** command. Here's a breakdown of what each part of the command does:
 
--   `-i ../data/cgigas_roslin_rna.index`: Use the kallisto index file located at `../data/cgigas_roslin_rna.index`.
--   `-o ../output/kallisto_01/{}`: Write the output files to a directory called `../output/kallisto_01/` with a subdirectory named after the base filename of the input file (the {} is a placeholder for the base filename).
+1.  **`find ../data/*fastq.gz`**:
+
+    -   This command finds all files in the **`../data/`** directory (and its subdirectories) with names ending in **`*fastq.gz`**.
+
+2.  **`| xargs basename -s _L001_R1_001.fastq.gz`**:
+
+    -   The output of **`find`** (paths to **`.fastq.gz`** files) is piped (**`|`**) to **`xargs`**, which then applies the **`basename -s _L001_R1_001.fastq.gz`** command to each path.
+
+    -   **`basename`** is used to strip the directory and suffix from filenames. The **`-s`** option specifies a suffix to remove.
+
+    -   In this case, **`basename`** removes the directory path and the suffix **`_L001_R1_001.fastq.gz`** from each filename.
+
+3.  **`| xargs -I{} /home/shared/kallisto/kallisto quant -i ../data/cgigas_roslin_rna.index -o ../output/kallisto_01/{} -t 4 --single -l 100 -s 10 ../data/{}_L001_R1_001.fastq.gz`**:
+
+    -   The output from the previous **`xargs`** (which are now the modified filenames) is piped to another **`xargs`** command.
+
+    -   **`-I{}`** is used to specify a replacement string **`{}`**. This string is replaced by each input line (filename) in the subsequent command.
+
+    -   The command **`/home/shared/kallisto/kallisto quant...`** is executed for each input line, with **`{}`** being replaced by the input filename (without path and specific suffix).
+
+    -   This part of the command runs the **`kallisto quant`** program for RNA sequence quantification, using various options and input files. The **`{}`** placeholder is replaced by the current filename (from the previous steps) in two places: for the output directory and for the input **`.fastq.gz`** file.
+
+In summary, this command sequence finds **`.fastq.gz`** files, modifies their names by removing paths and a specific suffix, and then runs a **`kallisto quant`** command on each file, directing the output to a specific directory and using certain program options. This is a common pattern in bioinformatics workflows, where operations need to be applied to multiple files in an automated manner.
+
 -   `-t 4`: Use 4 threads for the computation.
--   `--single -l 100 -s 10`: Specify that the input file contains single-end reads (--single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).
--   The input file to process is specified using the {} placeholder, which is replaced by the base filename from the previous step.
 
-        
+-   `--single -l 100 -s 10`: Specify that the input file contains single-end reads (--single), with an average read length of 100 (-l 100) and a standard deviation of 10 (-s 10).
+
+````         
 ``` {{bash}}
 mkdir ../output/kallisto_01
 
@@ -209,7 +231,7 @@ quant -i ../data/cgigas_roslin_rna.index \
 -t 4 \
 --single -l 100 -s 10 ../data/{}_L001_R1_001.fastq.gz
 ```
-
+````
 
 This command runs the `abundance_estimates_to_matrix.pl` script from the Trinity RNA-seq assembly software package to create a gene expression matrix from kallisto output files.
 
@@ -222,7 +244,7 @@ The specific options and arguments used in the command are as follows:
 -   `--name_sample_by_basedir`: Use the sample directory name (i.e., the final directory in the input file paths) as the sample name in the output matrix.\
 -   And then there are the kallisto abundance files to use as input for creating the gene expression matrix.
 
-         
+````         
 ``` {{bash}}
 perl /home/shared/trinityrnaseq-v2.12.0/util/abundance_estimates_to_matrix.pl \
 --est_method kallisto \
@@ -254,7 +276,7 @@ perl /home/shared/trinityrnaseq-v2.12.0/util/abundance_estimates_to_matrix.pl \
     ../output/kallisto_01/N57_S191/abundance.tsv \
     ../output/kallisto_01/N59_S189/abundance.tsv
 ```
-
+````
 
 # Running DESeq2
 
@@ -272,7 +294,7 @@ The below code could be a single script (or single chunk). I like separating to 
 
 Load packages:
 
-     
+````         
 ``` {{r}}
 library(DESeq2)
 library(tidyverse)
@@ -280,42 +302,42 @@ library(pheatmap)
 library(RColorBrewer)
 library(data.table)
 ```
-
+````
 
 Might need to install first eg
 
-       
+````         
 ``` {{r}}
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("DESeq2")
 ```
-
+````
 
 ### Read in count matrix
 
-        
+````         
 ``` {{r}}
 countmatrix <- read.delim("../output/kallisto_01.isoform.counts.matrix", header = TRUE, sep = '\t')
 rownames(countmatrix) <- countmatrix$X
 countmatrix <- countmatrix[,-1]
 head(countmatrix)
 ```
-
+````
 
 Round integers up to hole numbers for further analysis:
 
-      
+````         
 ``` {{r}}
 countmatrix <- round(countmatrix, 0)
 str(countmatrix)
 ```
-
+````
 
 ## Get DEGs based on Desication
 
-        
+````         
 ``` {{r}}
 deseq2.colData <- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), 
                              type=factor(rep("single-read", 24)))
@@ -324,26 +346,30 @@ deseq2.dds <- DESeqDataSetFromMatrix(countData = countmatrix,
                                      colData = deseq2.colData, 
                                      design = ~ condition)
 ```
+````
 
-
-        
+````         
 ``` {{r}}
 deseq2.dds <- DESeq(deseq2.dds)
 deseq2.res <- results(deseq2.dds)
 deseq2.res <- deseq2.res[order(rownames(deseq2.res)), ]
 ```
+````
 
-
-        
+````         
 ``` {{r}}
 head(deseq2.res)
 ```
-        
+````
+
+````         
 ``` {{r}}
 # Count number of hits with adjusted p-value less then 0.05
 dim(deseq2.res[!is.na(deseq2.res$padj) & deseq2.res$padj <= 0.05, ])
 ```
-       
+````
+
+````         
 ``` {{r}}
 tmp <- deseq2.res
 # The main plot
@@ -357,8 +383,10 @@ points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="red")
 # 2 FC lines
 abline(h=c(-1,1), col="blue")
 ```
-       
+````
+
+````         
 ``` {{r}}
 write.table(tmp.sig, "../output/DEGlist.tab", row.names = T)
 ```
-
+````
