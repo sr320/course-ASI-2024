@@ -322,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#running-deseq2" id="toc-running-deseq2" class="nav-link" data-scroll-target="#running-deseq2">Running DESeq2</a>
   <ul class="collapse">
   <li><a href="#read-in-count-matrix" id="toc-read-in-count-matrix" class="nav-link" data-scroll-target="#read-in-count-matrix">Read in count matrix</a></li>
-  <li><a href="#get-degs-based-on-desication" id="toc-get-degs-based-on-desication" class="nav-link" data-scroll-target="#get-degs-based-on-desication">Get DEGs based on Desication</a></li>
+  <li><a href="#get-degs-based-on-desiccation" id="toc-get-degs-based-on-desiccation" class="nav-link" data-scroll-target="#get-degs-based-on-desiccation">Get DEGs based on Desiccation</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sr320/course-ASI-2024/edit/main/assignments/02-DGE.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sr320/course-ASI-2024/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -740,8 +740,32 @@ countmatrix &lt;- round(countmatrix, 0)
 str(countmatrix)
 ```</code></pre>
 </section>
-<section id="get-degs-based-on-desication" class="level2">
-<h2 class="anchored" data-anchor-id="get-degs-based-on-desication">Get DEGs based on Desication</h2>
+<section id="get-degs-based-on-desiccation" class="level2">
+<h2 class="anchored" data-anchor-id="get-degs-based-on-desiccation">Get DEGs based on Desiccation</h2>
+<p>This code snippet is part of a typical analysis pipeline using the DESeq2 package in R, which is widely used for differential gene expression analysis based on count data (like RNA-Seq or other forms of count data). Let’s break down the code:</p>
+<ol type="1">
+<li><p><strong><code>deseq2.colData &lt;- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), type=factor(rep("single-read", 24)))</code></strong></p>
+<ul>
+<li><p>This line creates a data frame named <strong><code>deseq2.colData</code></strong>.</p></li>
+<li><p>The data frame has two columns: <strong><code>condition</code></strong> and <strong><code>type</code></strong>.</p></li>
+<li><p>The <strong><code>condition</code></strong> column is made up of 24 elements, where the first 12 elements are the word “control” and the next 12 are “desicated”. These are likely to represent two experimental conditions, and <strong><code>factor</code></strong> indicates that these are categorical variables.</p></li>
+<li><p>The <strong><code>type</code></strong> column consists of 24 repetitions of the term “single-read”, which might indicate the type of sequencing or experiment performed.</p></li>
+<li><p>Overall, this suggests an experiment with 24 samples, where 12 are control and 12 are under some desiccation treatment, and all are single-read type experiments.</p></li>
+</ul></li>
+<li><p><strong><code>rownames(deseq2.colData) &lt;- colnames(data)</code></strong></p>
+<ul>
+<li><p>This line sets the row names of the <strong><code>deseq2.colData</code></strong> data frame to be the same as the column names of another data frame or matrix called <strong><code>data</code></strong>.</p></li>
+<li><p>This is important for matching the metadata (in <strong><code>deseq2.colData</code></strong>) to the actual count data (presumably in <strong><code>data</code></strong>), ensuring that each column of count data has the corresponding experimental condition and type information.</p></li>
+</ul></li>
+<li><p><strong><code>deseq2.dds &lt;- DESeqDataSetFromMatrix(countData = countmatrix, colData = deseq2.colData, design = ~ condition)</code></strong></p>
+<ul>
+<li><p>This line creates a DESeqDataSet object, which is the core data structure used in DESeq2 for managing count data alongside its corresponding experimental metadata.</p></li>
+<li><p><strong><code>countData = countmatrix</code></strong> specifies that the actual count data is contained in a matrix called <strong><code>countmatrix</code></strong>.</p></li>
+<li><p><strong><code>colData = deseq2.colData</code></strong> attaches the metadata we created earlier to the count data. This metadata includes information about the experimental conditions and types for each sample.</p></li>
+<li><p><strong><code>design = ~ condition</code></strong> defines the model design for the differential expression analysis, indicating that the primary variable of interest for differential expression is the <strong><code>condition</code></strong> (i.e., control vs.&nbsp;desicated).</p></li>
+</ul></li>
+</ol>
+<p>In summary, this code is setting up for a differential expression analysis comparing two conditions (control and desiccated) across 24 samples (assumed to be single-read type) using the DESeq2 package. The <strong><code>DESeqDataSet</code></strong> object created will be used in subsequent steps of the analysis to perform normalization, differential expression testing, and other statistical evaluations.</p>
 <pre><code>``` {{r}}
 deseq2.colData &lt;- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), 
                              type=factor(rep("single-read", 24)))
@@ -1522,61 +1546,93 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb21-335"><a href="#cb21-335" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb21-336"><a href="#cb21-336" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
 <span id="cb21-337"><a href="#cb21-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get DEGs based on Desication</span></span>
+<span id="cb21-338"><a href="#cb21-338" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get DEGs based on Desiccation</span></span>
 <span id="cb21-339"><a href="#cb21-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.colData &lt;- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), </span></span>
-<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a><span class="in">                             type=factor(rep("single-read", 24)))</span></span>
-<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a><span class="in">rownames(deseq2.colData) &lt;- colnames(data)</span></span>
-<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.dds &lt;- DESeqDataSetFromMatrix(countData = countmatrix,</span></span>
-<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a><span class="in">                                     colData = deseq2.colData, </span></span>
-<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a><span class="in">                                     design = ~ condition)</span></span>
-<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.dds &lt;- DESeq(deseq2.dds)</span></span>
-<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.res &lt;- results(deseq2.dds)</span></span>
-<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.res &lt;- deseq2.res[order(rownames(deseq2.res)), ]</span></span>
-<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a><span class="in">head(deseq2.res)</span></span>
-<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a><span class="in"># Count number of hits with adjusted p-value less then 0.05</span></span>
-<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a><span class="in">dim(deseq2.res[!is.na(deseq2.res$padj) &amp; deseq2.res$padj &lt;= 0.05, ])</span></span>
-<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-340"><a href="#cb21-340" aria-hidden="true" tabindex="-1"></a>This code snippet is part of a typical analysis pipeline using the DESeq2 package in R, which is widely used for differential gene expression analysis based on count data (like RNA-Seq or other forms of count data). Let's break down the code:</span>
+<span id="cb21-341"><a href="#cb21-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-342"><a href="#cb21-342" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**`deseq2.colData &lt;- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), type=factor(rep("single-read", 24)))`**</span>
+<span id="cb21-343"><a href="#cb21-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-344"><a href="#cb21-344" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>This line creates a data frame named **`deseq2.colData`**.</span>
+<span id="cb21-345"><a href="#cb21-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-346"><a href="#cb21-346" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>The data frame has two columns: **`condition`** and **`type`**.</span>
+<span id="cb21-347"><a href="#cb21-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-348"><a href="#cb21-348" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>The **`condition`** column is made up of 24 elements, where the first 12 elements are the word "control" and the next 12 are "desicated". These are likely to represent two experimental conditions, and **`factor`** indicates that these are categorical variables.</span>
+<span id="cb21-349"><a href="#cb21-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-350"><a href="#cb21-350" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>The **`type`** column consists of 24 repetitions of the term "single-read", which might indicate the type of sequencing or experiment performed.</span>
+<span id="cb21-351"><a href="#cb21-351" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-352"><a href="#cb21-352" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>Overall, this suggests an experiment with 24 samples, where 12 are control and 12 are under some desiccation treatment, and all are single-read type experiments.</span>
+<span id="cb21-353"><a href="#cb21-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-354"><a href="#cb21-354" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**`rownames(deseq2.colData) &lt;- colnames(data)`**</span>
+<span id="cb21-355"><a href="#cb21-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-356"><a href="#cb21-356" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>This line sets the row names of the **`deseq2.colData`** data frame to be the same as the column names of another data frame or matrix called **`data`**.</span>
+<span id="cb21-357"><a href="#cb21-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-358"><a href="#cb21-358" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>This is important for matching the metadata (in **`deseq2.colData`**) to the actual count data (presumably in **`data`**), ensuring that each column of count data has the corresponding experimental condition and type information.</span>
+<span id="cb21-359"><a href="#cb21-359" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-360"><a href="#cb21-360" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**`deseq2.dds &lt;- DESeqDataSetFromMatrix(countData = countmatrix, colData = deseq2.colData, design = ~ condition)`**</span>
+<span id="cb21-361"><a href="#cb21-361" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-362"><a href="#cb21-362" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>This line creates a DESeqDataSet object, which is the core data structure used in DESeq2 for managing count data alongside its corresponding experimental metadata.</span>
+<span id="cb21-363"><a href="#cb21-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-364"><a href="#cb21-364" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**`countData = countmatrix`** specifies that the actual count data is contained in a matrix called **`countmatrix`**.</span>
+<span id="cb21-365"><a href="#cb21-365" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-366"><a href="#cb21-366" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**`colData = deseq2.colData`** attaches the metadata we created earlier to the count data. This metadata includes information about the experimental conditions and types for each sample.</span>
+<span id="cb21-367"><a href="#cb21-367" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-368"><a href="#cb21-368" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span>**`design = ~ condition`** defines the model design for the differential expression analysis, indicating that the primary variable of interest for differential expression is the **`condition`** (i.e., control vs. desicated).</span>
+<span id="cb21-369"><a href="#cb21-369" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-370"><a href="#cb21-370" aria-hidden="true" tabindex="-1"></a>In summary, this code is setting up for a differential expression analysis comparing two conditions (control and desiccated) across 24 samples (assumed to be single-read type) using the DESeq2 package. The **`DESeqDataSet`** object created will be used in subsequent steps of the analysis to perform normalization, differential expression testing, and other statistical evaluations.</span>
 <span id="cb21-371"><a href="#cb21-371" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-372"><a href="#cb21-372" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
 <span id="cb21-373"><a href="#cb21-373" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a><span class="in">tmp &lt;- deseq2.res</span></span>
-<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a><span class="in"># The main plot</span></span>
-<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a><span class="in">plot(tmp$baseMean, tmp$log2FoldChange, pch=20, cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",</span></span>
-<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a><span class="in">     main="DEG Dessication  (pval &lt;= 0.05)",</span></span>
-<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a><span class="in">     xlab="mean of normalized counts",</span></span>
-<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a><span class="in">     ylab="Log2 Fold Change")</span></span>
-<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a><span class="in"># Getting the significant points and plotting them again so they're a different color</span></span>
-<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a><span class="in">tmp.sig &lt;- deseq2.res[!is.na(deseq2.res$padj) &amp; deseq2.res$padj &lt;= 0.05, ]</span></span>
-<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a><span class="in">points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="red")</span></span>
-<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a><span class="in"># 2 FC lines</span></span>
-<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a><span class="in">abline(h=c(-1,1), col="blue")</span></span>
-<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
-<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
-<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
-<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a><span class="in">write.table(tmp.sig, "../output/DEGlist.tab", row.names = T)</span></span>
-<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-374"><a href="#cb21-374" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.colData &lt;- data.frame(condition=factor(c(rep("control", 12), rep("desicated", 12))), </span></span>
+<span id="cb21-375"><a href="#cb21-375" aria-hidden="true" tabindex="-1"></a><span class="in">                             type=factor(rep("single-read", 24)))</span></span>
+<span id="cb21-376"><a href="#cb21-376" aria-hidden="true" tabindex="-1"></a><span class="in">rownames(deseq2.colData) &lt;- colnames(data)</span></span>
+<span id="cb21-377"><a href="#cb21-377" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.dds &lt;- DESeqDataSetFromMatrix(countData = countmatrix,</span></span>
+<span id="cb21-378"><a href="#cb21-378" aria-hidden="true" tabindex="-1"></a><span class="in">                                     colData = deseq2.colData, </span></span>
+<span id="cb21-379"><a href="#cb21-379" aria-hidden="true" tabindex="-1"></a><span class="in">                                     design = ~ condition)</span></span>
+<span id="cb21-380"><a href="#cb21-380" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-381"><a href="#cb21-381" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-382"><a href="#cb21-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-383"><a href="#cb21-383" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb21-384"><a href="#cb21-384" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
+<span id="cb21-385"><a href="#cb21-385" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.dds &lt;- DESeq(deseq2.dds)</span></span>
+<span id="cb21-386"><a href="#cb21-386" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.res &lt;- results(deseq2.dds)</span></span>
+<span id="cb21-387"><a href="#cb21-387" aria-hidden="true" tabindex="-1"></a><span class="in">deseq2.res &lt;- deseq2.res[order(rownames(deseq2.res)), ]</span></span>
+<span id="cb21-388"><a href="#cb21-388" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-389"><a href="#cb21-389" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-390"><a href="#cb21-390" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-391"><a href="#cb21-391" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb21-392"><a href="#cb21-392" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
+<span id="cb21-393"><a href="#cb21-393" aria-hidden="true" tabindex="-1"></a><span class="in">head(deseq2.res)</span></span>
+<span id="cb21-394"><a href="#cb21-394" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-395"><a href="#cb21-395" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-396"><a href="#cb21-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-397"><a href="#cb21-397" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb21-398"><a href="#cb21-398" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
+<span id="cb21-399"><a href="#cb21-399" aria-hidden="true" tabindex="-1"></a><span class="in"># Count number of hits with adjusted p-value less then 0.05</span></span>
+<span id="cb21-400"><a href="#cb21-400" aria-hidden="true" tabindex="-1"></a><span class="in">dim(deseq2.res[!is.na(deseq2.res$padj) &amp; deseq2.res$padj &lt;= 0.05, ])</span></span>
+<span id="cb21-401"><a href="#cb21-401" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-402"><a href="#cb21-402" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-403"><a href="#cb21-403" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-404"><a href="#cb21-404" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb21-405"><a href="#cb21-405" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
+<span id="cb21-406"><a href="#cb21-406" aria-hidden="true" tabindex="-1"></a><span class="in">tmp &lt;- deseq2.res</span></span>
+<span id="cb21-407"><a href="#cb21-407" aria-hidden="true" tabindex="-1"></a><span class="in"># The main plot</span></span>
+<span id="cb21-408"><a href="#cb21-408" aria-hidden="true" tabindex="-1"></a><span class="in">plot(tmp$baseMean, tmp$log2FoldChange, pch=20, cex=0.45, ylim=c(-3, 3), log="x", col="darkgray",</span></span>
+<span id="cb21-409"><a href="#cb21-409" aria-hidden="true" tabindex="-1"></a><span class="in">     main="DEG Dessication  (pval &lt;= 0.05)",</span></span>
+<span id="cb21-410"><a href="#cb21-410" aria-hidden="true" tabindex="-1"></a><span class="in">     xlab="mean of normalized counts",</span></span>
+<span id="cb21-411"><a href="#cb21-411" aria-hidden="true" tabindex="-1"></a><span class="in">     ylab="Log2 Fold Change")</span></span>
+<span id="cb21-412"><a href="#cb21-412" aria-hidden="true" tabindex="-1"></a><span class="in"># Getting the significant points and plotting them again so they're a different color</span></span>
+<span id="cb21-413"><a href="#cb21-413" aria-hidden="true" tabindex="-1"></a><span class="in">tmp.sig &lt;- deseq2.res[!is.na(deseq2.res$padj) &amp; deseq2.res$padj &lt;= 0.05, ]</span></span>
+<span id="cb21-414"><a href="#cb21-414" aria-hidden="true" tabindex="-1"></a><span class="in">points(tmp.sig$baseMean, tmp.sig$log2FoldChange, pch=20, cex=0.45, col="red")</span></span>
+<span id="cb21-415"><a href="#cb21-415" aria-hidden="true" tabindex="-1"></a><span class="in"># 2 FC lines</span></span>
+<span id="cb21-416"><a href="#cb21-416" aria-hidden="true" tabindex="-1"></a><span class="in">abline(h=c(-1,1), col="blue")</span></span>
+<span id="cb21-417"><a href="#cb21-417" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-418"><a href="#cb21-418" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb21-419"><a href="#cb21-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-420"><a href="#cb21-420" aria-hidden="true" tabindex="-1"></a><span class="in">````         </span></span>
+<span id="cb21-421"><a href="#cb21-421" aria-hidden="true" tabindex="-1"></a><span class="in">``` {{r}}</span></span>
+<span id="cb21-422"><a href="#cb21-422" aria-hidden="true" tabindex="-1"></a><span class="in">write.table(tmp.sig, "../output/DEGlist.tab", row.names = T)</span></span>
+<span id="cb21-423"><a href="#cb21-423" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb21-424"><a href="#cb21-424" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
