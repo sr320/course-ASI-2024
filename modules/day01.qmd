@@ -2,39 +2,35 @@
 title: "Agenda"
 ---
 
-
 # Notepad
 
 [google docs notepad](https://docs.google.com/document/d/1hEh-KW_sLq0EjMR5IuQjB8H629X2exJZbFefLs6upqE/edit?usp=sharing)
 
+# Raven
+
+<http://raven.fish.washington.edu:8787>
+
 # Slides
-All slides are available at
-<https://github.com/sr320/course-ASI-2024/tree/main/slides>
 
-
+All slides are available at <https://github.com/sr320/course-ASI-2024/tree/main/slides>
 
 # Grading
-This course will be graded. There will quizzes worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms. 
 
-- [Quiz 1](https://forms.gle/tkFgrNQ2Qw8HEEhT8) Due 14 Jan
-- [Quiz 2](https://forms.gle/RiUEqEurwSVQyZBdA) Due 15 Jan
-- [Quiz 3](https://forms.gle/VR5TnDug2ACEZQ9EA) Due 16 Jan
+This course will be graded. There will quizzes worth 15 pts and on the final day you will give a presentation worth 25 pts. Quizzes will be in the form of Google Forms.
 
-
-
+-   [Quiz 1](https://forms.gle/tkFgrNQ2Qw8HEEhT8) Due 14 Jan
+-   [Quiz 2](https://forms.gle/RiUEqEurwSVQyZBdA) Due 15 Jan
+-   [Quiz 3](https://forms.gle/VR5TnDug2ACEZQ9EA) Due 16 Jan
+-   [Quiz 4](https://forms.gle/L2UsrWS2Wy4dEcFk9) Due 17 Jan
 
 ## Presentations
 
-On Friday you will give a presentation to the class. The presentation should be about 10-15 minutes long and should include at least one reference. For this assignment you will give a presentation on how a taxa or coastal system could be impacted by climate change and how you would     
-1) assess the impact on the organism and/or system without using any molecular biology    
-2) assess the impact on the organism and/or system with using genomic technigues that could include gene expression and epigenetics mechanisms.    
-3) include what possible results might look like for both 1 and 2 and how you would interpret them     
-4) be sure to include any caveats or stipulations (eg "however another explanation might be xxxxxxx)     
+On Friday you will give a presentation to the class. The presentation should be about 10-15 minutes long and should include at least one reference. For this assignment you will give a presentation on how a taxa or coastal system could be impacted by climate change and how you would\
+1) assess the impact on the organism and/or system without using any molecular biology\
+2) assess the impact on the organism and/or system with using genomic technigues that could include gene expression and epigenetics mechanisms.\
+3) include what possible results might look like for both 1 and 2 and how you would interpret them\
+4) be sure to include any caveats or stipulations (eg "however another explanation might be xxxxxxx)\
 5) Conclude your talk by discussing the possible implications and what the species or system might look like in 10 year. This could include suggested interventions to change to outcome.
-
-
-
-
 
 # Other useful links:
 
@@ -44,31 +40,20 @@ Roberts Lab handbook: <https://robertslab.github.io/resources/>
 
 GitHub Organizaton: <https://github.com/course-ASI-2024>
 
-
-
-
-
-
 # Students
 
-| No. | Name            | Last Name | Email                        | Title/Position                                         |
-|-----|-----------------|-----------|------------------------------|--------------------------------------------------------|
-| 1   | Juan Francisco  | Araya     | jfaraya@u.uchile.cl          | PhD (c) in Systematics and Biodiversity                |
-| 2   | Sindy           | Díaz      | sidiaz2023@udec.cl           | PhD Student MaReA                                      |
-| 3   | Krystel         | Susaya    | ksusaya2023@udec.cl          | MSc Student in Oceanography                            |
-| 4   | Constanza       | Saez      | constanzajasaez@udec.cl      | MSc en Preventive Veterinary Medicine. Research assistant at INCAR |
-| 5   | Pablo           | Oyarzo    | POYARZO2020@udec.cl          |                                                        |
-| 6   | Antonio         | Casuso    | acasuso@udec.cl              | Ph.D. in Cs. mention in Management of Renewable Aquatic Resources (MaReA). |
-| 7   | Jurleys         | Vellojin  | jurleys.vellojin@ifop.cl     | PhD in Aquaculture Sciences, Researcher, IFOP          |
-| 8   | Ailén           | Poza      | pozaailen@inibibb-conicet.gob.ar | PhD in Biology. Postdoc Centro I-Mar, Universidad de Los Lagos |
-| 9   | Diego           | Hernández | diego.jhc@gmail.com          | MSc in Oceanography PUCV                               |
-| 10  | María Fernanda  | Jiménez   | mariafernanda.jimenez@ifop.cl | PhD in Aquaculture, Researcher, IFOP                   |
-| 11  | Daniela         | Díaz      | ddiazibarrola@gmail.com      | PhD Student in Aquaculture Sciences                    |
-| 12  | Ana Verónica    | García    | anaverona.garciacondo@gmail.com | Aquaculture Engineer, Researcher INOCAR               |
-| 13  | Natalie         | Bravo     | nbravos@unprg.edu.pe         | Biologist                                              |
-
-
-
-
-
-
+| No. | Name           | Last Name | Email                             | Title/Position                                                             |
+|------------|------------|------------|------------|--------------------------|
+| 1   | Juan Francisco | Araya     | jfaraya\@u.uchile.cl              | PhD (c) in Systematics and Biodiversity                                    |
+| 2   | Sindy          | Díaz      | sidiaz2023\@udec.cl               | PhD Student MaReA                                                          |
+| 3   | Krystel        | Susaya    | ksusaya2023\@udec.cl              | MSc Student in Oceanography                                                |
+| 4   | Constanza      | Saez      | constanzajasaez\@udec.cl          | MSc en Preventive Veterinary Medicine. Research assistant at INCAR         |
+| 5   | Pablo          | Oyarzo    | POYARZO2020\@udec.cl              |                                                                            |
+| 6   | Antonio        | Casuso    | acasuso\@udec.cl                  | Ph.D. in Cs. mention in Management of Renewable Aquatic Resources (MaReA). |
+| 7   | Jurleys        | Vellojin  | jurleys.vellojin\@ifop.cl         | PhD in Aquaculture Sciences, Researcher, IFOP                              |
+| 8   | Ailén          | Poza      | pozaailen\@inibibb-conicet.gob.ar | PhD in Biology. Postdoc Centro I-Mar, Universidad de Los Lagos             |
+| 9   | Diego          | Hernández | diego.jhc\@gmail.com              | MSc in Oceanography PUCV                                                   |
+| 10  | María Fernanda | Jiménez   | mariafernanda.jimenez\@ifop.cl    | PhD in Aquaculture, Researcher, IFOP                                       |
+| 11  | Daniela        | Díaz      | ddiazibarrola\@gmail.com          | PhD Student in Aquaculture Sciences                                        |
+| 12  | Ana Verónica   | García    | anaverona.garciacondo\@gmail.com  | Aquaculture Engineer, Researcher INOCAR                                    |
+| 13  | Natalie        | Bravo     | nbravos\@unprg.edu.pe             | Biologist                                                                  |
