@@ -39,8 +39,8 @@ curl -O https://eagle.fish.washington.edu/Cvirg_tracks/C_virginica-3.0_Gnomon_ge
 ## Convert bam to bed
 
 ``` bash
-/home/shared/bedtools2/bin/bedtools bamtobed \ 
--i ../data/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam \ 
+/home/shared/bedtools2/bin/bedtools bamtobed \
+-i ../data/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam \
 > ../output/08-19F.bed
 ```
 
@@ -77,7 +77,8 @@ Lets grab a bed file of Transposable Elements and lncRNAs
 
 ``` bash
 cd ../data
-curl -O http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_gene.gff curl -O http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_rm.te.bed 
+curl -O http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_gene.gff 
+curl -O http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_rm.te.bed 
 curl -O http://owl.fish.washington.edu/halfshell/genomic-databank/cgigas_uk_roslin_v1_lncRNA.gff
 ```
 

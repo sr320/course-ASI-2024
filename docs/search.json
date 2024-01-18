@@ -25,7 +25,7 @@
     "href": "assignments/08-bedtools.html#convert-bam-to-bed",
     "title": "BEDtools",
     "section": "Convert bam to bed",
-    "text": "Convert bam to bed\n/home/shared/bedtools2/bin/bedtools bamtobed \\ \n-i ../data/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam \\ \n&gt; ../output/08-19F.bed\n\n\n\n\n\n\nWarning\n\n\n\nThis is big file. What should you not do with it?"
+    "text": "Convert bam to bed\n/home/shared/bedtools2/bin/bedtools bamtobed \\\n-i ../data/19F_R1_val_1_bismark_bt2_pe.deduplicated.sorted.bam \\\n&gt; ../output/08-19F.bed\n\n\n\n\n\n\nWarning\n\n\n\nThis is big file. What should you not do with it?"
   },
   {
     "objectID": "assignments/08-bedtools.html#get-coverage-of-sequence-reads-on-gene-regions",
